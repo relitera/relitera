@@ -1,0 +1,49 @@
+#Topo{
+    background-color: rgb(48, 48, 126);
+    padding: 20px;
+    width: 100%;
+}
+#Meio{
+    background-color: rgb(149, 96, 199);
+    padding: 70px;
+    width: 100%;
+}
+#Baixo{
+    background-color: white;
+    padding: 100px;
+    width: 100%;
+}
+.Botão1{
+    background-color: rgb(156, 156, 231);
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    font-size: 15pt;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.Botão2{
+    background-color: rgb(218, 119, 5);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16pt;
+    cursor: pointer;
+    border-radius: 20px;
+}
+#Lista{
+    align-self: last baseline;
+}
+h1{ 
+color: white;
+font: normal 15pt Arial;
+}
+h2{
+color: white;
+font: normal 25pt arial;
+text-align: center;
+}
+span{
+    color: white;
+    font: normal 15pt arial;
+}
