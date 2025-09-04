@@ -28,6 +28,12 @@
     cursor: pointer;
     border-radius: 20px;
 }
+.Cursos{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 40px 20px;
+}
 #Lista{
     align-self: last baseline;
 }
