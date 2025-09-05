@@ -1,10 +1,6 @@
-#Topo{
-    background-color: rgb(48, 48, 126);
-    padding: 20px;
-}
 #Meio{
     background-color: rgb(149, 96, 199);
-    padding: 70px;
+    padding: 65px;
 }
 #Baixo{
     background-color: white;
@@ -71,4 +67,12 @@ h3{
 span{
     color: white;
     font: normal 15pt arial;
+}
+header{
+    background-color: rgb(48, 48, 126);
+    padding: 20px;
+}
+main{
+    background-color: black;
+    padding-bottom: 400px;
 }
