@@ -3,8 +3,9 @@
     padding: 65px;
 }
 #Baixo{
-    background-color: white;
+    background-color: rgb(53, 0, 97);
     padding: 100px;
+    line-height: 32px;
 }
 .Botão1{
     background-color: rgb(156, 156, 231);
