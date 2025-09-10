@@ -74,19 +74,19 @@ img {
 }
 
 #Cristianismo{
-    background-image: url(CristianismoCurso.jpg);
+    background-image: url(assets/images/CristianismoCurso.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #Candomble{
-    background-image: url(CandombléCurso.jpg);
+    background-image: url(assets/images/CandombléCurso.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #Islamismo{
-    background-image: url(IslamismoCurso.jpg);
+    background-image: url(assets/images/IslamismoCurso.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
