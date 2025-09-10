@@ -1,31 +1,44 @@
+header {
+    background-color: rgb(48, 48, 126);
+    padding: 5px;
+}
+
+main {
+    background-color: black;
+}
+
+footer {
+    background-color: black;
+    padding: 68px;
+}
+
+img {
+    width: 25px;
+    height: 25px;
+}
+
+#Topo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 #Meio{
     background-color: rgb(149, 96, 199);
-    padding: 65px;
+    text-align: center;
+    font-size: 16pt;
+    padding: 30px;
 }
+
 #Baixo{
     background-color: rgb(53, 0, 97);
     padding: 100px;
     line-height: 32px;
+    text-align: center;
+    padding-top: 20px;
 }
-.Botão1{
-    background-color: rgb(156, 156, 231);
-    color: black;
-    border: none;
-    padding: 5px 10px;
-    font-size: 15pt;
-    cursor: pointer;
-    border-radius: 20px;
-}
-.Botão2{
-    background-color: rgb(218, 119, 5);
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16pt;
-    cursor: pointer;
-    border-radius: 20px;
-}
-.Cursos{
+
+.Cursos {
     background-color: black;
     color: white;
     border: none;
@@ -34,46 +47,46 @@
     cursor: pointer;
     border-radius: 30px;
 }
-#Caixa1{
-    background-image: url(assets/images/CristianismoCurso.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#Caixa2{
-    background-image: url(assets/images/CandombléCurso.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#Caixa3{
-    background-image: url(assets/images/IslamismoCurso.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#Lista{
-    align-self: last baseline;
-}
-h1{ 
-color: white;
-font: normal 15pt Arial;
-}
-h2{
-color: white;
-font: normal 25pt arial;
-text-align: center;
-}
-h3{
 
-    text-align: center;
+.ListaBotoes {
+    margin: 20px;
 }
-span{
-    color: white;
-    font: normal 15pt arial;
+
+.Botao1{
+    background-color: rgb(156, 156, 231);
+    color: black;
+    border: none;
+    padding: 2px 10px;
+    font-size: 15pt;
+    cursor: pointer;
+    border-radius: 20px;
 }
-header{
-    background-color: rgb(48, 48, 126);
-    padding: 20px;
+
+.Botao2{
+    background-color: rgb(218, 119, 5);
+    color: black;
+    border: none;
+    padding: 2px 20px;
+    font-size: 16pt;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
 }
-main{
-    background-color: black;
-    padding-bottom: 400px;
+
+#Cristianismo{
+    background-image: url(CristianismoCurso.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Candomble{
+    background-image: url(CandombléCurso.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Islamismo{
+    background-image: url(IslamismoCurso.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
