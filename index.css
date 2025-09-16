@@ -150,5 +150,31 @@ header {
 @media (max-width: 768px) {
     .grid {
         grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .top {
+        height: auto;
+        min-height: 50vh;
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+
+    .content {
+        height: auto;
+        min-height: 50vh;
+        padding: 40px 20px 80px 20px;
+    }
+
+    .card {
+        min-height: 250px;
+    }
+
+    .hero h2 {
+        font-size: 35px;
+    }
+
+    .hero p {
+        font-size: 16px;
     }
 }
