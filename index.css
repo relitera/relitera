@@ -147,7 +147,7 @@ header {
     gap: 100px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1076px) {
     .grid {
         grid-template-columns: 1fr;
         gap: 50px;
