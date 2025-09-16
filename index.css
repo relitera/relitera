@@ -6,6 +6,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -19,6 +20,7 @@ body {
     background-color: var(--bg-principal);
     color: var(--texto);
     font-family: "Roboto";
+    overflow: hidden;
 }
 
 .hero {
@@ -43,13 +45,31 @@ body {
 
 header {
     background-color: var(--bg-hero);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
     color: #ffffff;
     font-weight: 800;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
     a {
         color: inherit;
         text-decoration: none;
     }
-    box-shadow: 0 1px 0 0 #320845;
+    box-shadow: 0 2px 8px rgba(50, 8, 69, 0.3), 0 1px 3px rgba(50, 8, 69, 0.2);
+    i:hover {
+        cursor: pointer;
+    }
+}
+
+.header-esq {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 #botaoMissao {
@@ -62,6 +82,11 @@ header {
     text-decoration: none;
     font-weight: 800;
     color: inherit;
+}
+
+#botaoMissao:hover {
+    filter: brightness(0.95);
+    cursor: pointer;
 }
 
 .top {
@@ -81,12 +106,21 @@ header {
 }
 
 .card {
-    box-shadow: 10px 5px 5px rgb(190, 190, 190);
+    box-shadow: 10px 10px 5px rgb(190, 190, 190);
     padding: 20px;
     border-radius: 10px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     h2 {
-        margin-bottom: 2em;
+        padding-top: 20px;
+        font-size: xx-large;
+        margin-bottom: 1.5em;
         font-weight: 800;
+    }
+    p {
+        flex-grow: 1;
     }
 }
 
