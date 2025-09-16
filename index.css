@@ -1,0 +1,11 @@
+:root {
+    --bg-principal: #ffffff;
+    --bg-hero: #934cb2;
+    --texto: #28414c;
+    --texto-hero: #ffffff;
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto);
+}
