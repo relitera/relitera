@@ -16,11 +16,28 @@
     --texto-hero: #ffffff;
 }
 
+html {
+    /* Esconder scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     background-color: var(--bg-principal);
     color: var(--texto);
     font-family: "Roboto";
-    overflow: hidden;
+    /* Esconder scrollbar */
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 .hero {
@@ -128,4 +145,10 @@ header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 100px;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }
