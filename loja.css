@@ -46,7 +46,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1rem;
+    padding: 20px;
     color: #ffffff;
     font-weight: 800;
     display: flex;
@@ -63,9 +63,16 @@ header {
     }
 }
 
+.header-esq {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .card {
-    box-shadow: 5px 5px 5px rgb(190, 190, 190);
+    box-shadow: 5px 5px 5px 5px rgb(190, 190, 190);
     padding: 20px;
+    margin: 20px;
     border-radius: 10px;
     min-height: 200px;
     display: flex;
@@ -78,5 +85,37 @@ header {
         font-weight: 1000;
         font-size: xx-large;
     }
+    button {
+        width: 120px;
+        height: 25px;
+        border-radius: 8px;
+        border: none;
+    }
+    #Limpar {
+        background-color: rgb(179, 179, 179);
+        color: rgb(0, 0, 0);
+        font-size: 12;
+        font-weight: 800;
+    }
+    #Finalizar {
+        background-color: #934cb2;
+        color: #ffffff;
+        font-size: 12;
+        font-weight: 800;
+    }
+}
 
+.cart-icone {
+    background-color: #af79c4;
+    padding: 13px;
+    border-radius: 50%;
+}
+
+
+.title {
+    padding: 20px;
+    margin: 80px;
+    text-align: center;
+    color: #934cb2;
+    font-size: large;
 }
