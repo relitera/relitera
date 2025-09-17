@@ -1,45 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relitera</title>
-    <meta name="description" content="O site para aprender sobre religiões e culturas diversas, disponibilizando aprendizado por cursos em vídeo e conteúdos escritos. Visando um mundo mais empático.">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="global.css">
-</head>
-<body id="main-body">
-    <header>
-        <div id="Topo">
-            <h1><img src="assets/images/íconeSol.png" alt="Logo do Relitera, um sol"> RELITERA <img src="assets/images/íconeLua.png" alt="Logo do Relitera, uma lua"></h1>
-            <aside class="ListaBotoes">
-                <button id="BotaoInício" class="Botao2">INÍCIO</button>
-                <button id="BotaoNos" class="Botao1">QUEM NÓS SOMOS</button>
-                <button id="BotaoCursos" class="Botao1">CURSOS</button>
-                <button id="BotaoConta" class="Botao1">MINHA CONTA</button>
-            </aside>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Relitera</title>
+        <meta
+            name="description"
+            content="O site para aprender sobre religiões e culturas diversas, disponibilizando aprendizado por cursos em vídeo e conteúdos escritos. Visando um mundo mais empático."
+        />
+        <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="global.css" />
+        <script
+            src="https://kit.fontawesome.com/c2b6f6de7d.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <div class="top">
+            <header>
+                <div class="header-esq">
+                    <i class="fa-solid fa-bars fa-lg"></i>
+                    <a href="./index.html"><h1>Relitera</h1></a>
+                </div>
+                <div class="cart-icone">
+                    <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                </div>
+            </header>
+            <div class="hero">
+                <h2>Bem-vindo ao Relitera</h2>
+                <p>
+                    <strong
+                        >Seu guia espiritual para uma jornada de
+                        autoconhecimento e transformação</strong
+                    >
+                </p>
+                <!-- TODO: Atualizar URL para página correta -->
+                <a href="pages/quem-somos/quem-somos.html" id="botaoMissao"
+                    >Conheça nossa missão</a
+                >
+            </div>
         </div>
-    </header>
-    <main>
-        <div id="Meio">
-            <h1>Bem-vindo ao <strong>Relitera</strong></h1>
-            <p>Seu auxiliar <strong>espiritual</strong> em uma jornada de <em>autoconhecimento e transformação</em></p> <br>
-            <button id="BotaoNos" class="Botao2">Descubra mais sobre nós!</button>
+        <div class="content">
+            <div class="grid">
+                <div class="card">
+                    <h2>Amor e Compaixão</h2>
+                    <p>
+                        Descubra a importância do amor e da compaixão no dia a
+                        dia e, acima de tudo, como garantir que todos à sua
+                        volta compartilhem dos mesmos.
+                    </p>
+                </div>
+                <div class="card">
+                    <h2>Crescimento Espiritual</h2>
+                    <p>
+                        Desenvolva sua jornada interior através de práticas
+                        meditativas, reflexões profundas e conexões sagradas.
+                        Transforme sua vida com sabedoria ancestral e encontre
+                        seu propósito maior.
+                    </p>
+                </div>
+                <div class="card">
+                    <h2>Equilíbrio Interior</h2>
+                    <p>
+                        Encontre a harmonia entre mente, corpo e alma através de
+                        técnicas milenares de bem-estar. Cultive a paz interior
+                        e viva com serenidade em meio ao caos do mundo moderno.
+                    </p>
+                </div>
+            </div>
         </div>
-        <div id="Baixo">
-            <h1>Cursos disponíveis</h1>
-            <aside id="ListaCursos">
-                <button id="Cristianismo" class="Cursos">Cristianismo</button>
-                <button id="Candomble" class="Cursos">Candomblé</button>
-                <button id="Islamismo" class="Cursos">Islamismo</button>
-                <button id="Hinduismo" class="Cursos">Hinduismo</button>
-                <button id="Judaismo" class="Cursos">Judaismo</button>
-                <button id="Umbanda" class="Cursos">Umbanda</button>
-                <button id="Kimbanda" class="Cursos">Kimbanda</button>
-                <button id="Budismo" class="Cursos">Budismo</button>
-            </aside>
-        </div>
-    </main>
-    <footer></footer>
-</body>
+    </body>
 </html>

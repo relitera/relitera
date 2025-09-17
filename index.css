@@ -1,92 +1,186 @@
-header {
-    background-color: rgb(48, 48, 126);
-    padding: 5px;
+@font-face {
+    font-family: Roboto;
+    src: url("./assets/fonts/Roboto-Regular.ttf");
 }
 
-main {
-    background-color: black;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-footer {
-    background-color: black;
-    padding: 68px;
+:root {
+    --bg-principal: #ffffff;
+    --bg-hero: #934cb2;
+    --texto: #28414c;
+    --texto-hero: #ffffff;
 }
 
-img {
-    width: 25px;
-    height: 25px;
+html {
+    /* Esconder scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
-#Topo {
-    display: flex;
-    flex-direction: row;
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto);
+    font-family: "Roboto";
+    /* Esconder scrollbar */
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.hero {
+    background-color: var(--bg-hero);
+    justify-content: center;
+    text-align: center;
     align-items: center;
+    margin-top: 15vh;
+    p,
+    h2 {
+        color: var(--texto-hero);
+    }
+    h2 {
+        font-weight: 800;
+        font-size: 50px;
+    }
+    p {
+        font-size: 20px;
+        font-weight: 100;
+    }
 }
 
-#Meio{
-    background-color: rgb(149, 96, 199);
-    text-align: center;
-    font-size: 16pt;
-    padding: 30px;
+header {
+    background-color: var(--bg-hero);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    color: #ffffff;
+    font-weight: 800;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+    box-shadow: 0 2px 8px rgba(50, 8, 69, 0.3), 0 1px 3px rgba(50, 8, 69, 0.2);
+    i:hover {
+        cursor: pointer;
+    }
 }
 
-#Baixo{
-    background-color: rgb(53, 0, 97);
-    padding: 100px;
-    line-height: 32px;
-    text-align: center;
-    padding-top: 20px;
+.header-esq {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-.Cursos {
-    background-color: black;
-    color: white;
-    border: none;
-    font-size: 20pt;
-    padding: 80px 60px;
-    cursor: pointer;
-    border-radius: 30px;
-}
-
-.ListaBotoes {
-    margin: 20px;
-}
-
-.Botao1{
-    background-color: rgb(156, 156, 231);
-    color: black;
-    border: none;
-    padding: 2px 10px;
-    font-size: 15pt;
-    cursor: pointer;
+#botaoMissao {
+    background-color: #f39b13;
+    padding: 20px;
+    font-weight: 800;
     border-radius: 20px;
+    margin-top: 5vh;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 800;
+    color: inherit;
 }
 
-.Botao2{
-    background-color: rgb(218, 119, 5);
-    color: black;
-    border: none;
-    padding: 2px 20px;
-    font-size: 16pt;
+#botaoMissao:hover {
+    filter: brightness(0.95);
     cursor: pointer;
-    border-radius: 20px;
-    font-weight: bold;
 }
 
-#Cristianismo{
-    background-image: url(assets/images/CristianismoCurso.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+.top {
+    background-color: var(--bg-hero);
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
 
-#Candomble{
-    background-image: url(assets/images/CandombléCurso.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+.content {
+    height: 50vh;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-#Islamismo{
-    background-image: url(assets/images/IslamismoCurso.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+.card {
+    box-shadow: 5px 5px 5px rgb(190, 190, 190);
+    padding: 20px;
+    border-radius: 10px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    h2 {
+        padding-top: 20px;
+        font-size: xx-large;
+        margin-bottom: 1.5em;
+        font-weight: 800;
+    }
+    p {
+        flex-grow: 1;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+}
+
+@media (max-width: 1076px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .top {
+        height: auto;
+        min-height: 50vh;
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+
+    .content {
+        height: auto;
+        min-height: 50vh;
+        padding: 40px 20px 80px 20px;
+    }
+
+    .card {
+        min-height: 250px;
+    }
+
+    .hero h2 {
+        font-size: 35px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+.cart-icone {
+    background-color: #af79c4;
+    padding: 13px;
+    border-radius: 50%;
 }
