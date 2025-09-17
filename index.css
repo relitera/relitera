@@ -330,7 +330,7 @@ header {
         }
     }
     
-    // Cores específicas para cada ícone
+    /* Cores específicas para cada ícone */
     &[data-icon="heart"] .card-icon {
         background: linear-gradient(135deg, var(--icon-heart) 0%, #c0392b 100%);
     }
