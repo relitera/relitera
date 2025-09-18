@@ -17,4 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
     sidebarToggle.addEventListener("click", toggleSidebar);
     sidebarClose.addEventListener("click", closeSidebar);
     backdrop.addEventListener("click", closeSidebar);
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && sidebar.classList.contains("open")) {
+            closeSidebar();
+        }
+    });
 });
