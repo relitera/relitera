@@ -684,3 +684,7 @@ header {
         width: 100%;
     }
 }
+
+.disable-scroll {
+    overflow: hidden;
+}
