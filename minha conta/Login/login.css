@@ -90,6 +90,7 @@ body::-webkit-scrollbar {
         font-size: large;
         border: none;
         border-radius: 20px;        
+        text-align: center;
     }
 }
 
