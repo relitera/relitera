@@ -101,7 +101,6 @@ body::-webkit-scrollbar {
 .buttons{
     display: flex;
     justify-content: center;
-    margin: 0 auto;
     gap: 20px;
 
     .tipo2{
@@ -140,5 +139,17 @@ body::-webkit-scrollbar {
     &::before {
         opacity: 1;
     }
+    }
+}
+
+.registro{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+    a{
+        color: #1a1a1a;
+        font-size: medium;
+        font-weight: bold;
     }
 }
