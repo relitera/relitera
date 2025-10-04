@@ -103,7 +103,7 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: center;
     gap: 20px;
-
+    
     .tipo2{
         background-color: #934cb2;
         color: black;
@@ -131,6 +131,9 @@ body::-webkit-scrollbar {
     &::before {
         opacity: 1;
     }
+
+    cursor: pointer;
+
     }
 
     .tipo2:hover{
@@ -140,6 +143,9 @@ body::-webkit-scrollbar {
     &::before {
         opacity: 1;
     }
+
+    cursor: pointer;
+
     }
 }
 
