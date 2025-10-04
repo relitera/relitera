@@ -67,9 +67,78 @@ body::-webkit-scrollbar {
 
 .title{ 
     font-size: 50pt;
-    color: var(--bg-hero);
+    color: var(--texto-dark);
     display: flex;
     align-content: center;
     justify-content: center;
-    margin: 125px;
+    margin-top: 125px;
+    margin-bottom: 50px;
+}
+
+.input{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 40px;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-bottom: 100px;
+
+    input{
+        padding: 20px;
+        background-color: #934cb2;
+        color: #1a1a1a;
+        font-size: large;
+        border: none;
+        border-radius: 20px;        
+    }
+}
+
+.input input::placeholder{
+    color: #1a1a1a;
+    text-align: center;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 20px;
+
+    .tipo2{
+        background-color: #934cb2;
+        color: black;
+        width: 200px;
+        height: 50px;
+        border: none;
+        border-radius: 30px;
+        font-size: large;
+    }
+
+    .tipo1{
+        background-color: #9f51c0;
+        color: #1a1a1a;
+        width: 200px;
+        height: 50px;
+        border: none;
+        border-radius: 30px;
+        font-size: large;
+    }
+
+    .tipo1:hover{
+        transform: translateY(-3px);
+    box-shadow: 0 15px 45px #9f51c0;
+
+    &::before {
+        opacity: 1;
+    }
+    }
+
+    .tipo2:hover{
+        transform: translateY(-3px);
+    box-shadow: 0 15px 45px #934cb2;
+
+    &::before {
+        opacity: 1;
+    }
+    }
 }
