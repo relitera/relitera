@@ -31,8 +31,8 @@ function registrar() {
         console.log(dataUsuario);
         console.log(emailUsuario);
         console.log(senhaUsuario);
+        apagar();
     }
-    apagar();
 }
 
 function apagar() {
