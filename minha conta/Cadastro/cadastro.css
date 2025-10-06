@@ -117,13 +117,22 @@ body::-webkit-scrollbar {
         cursor: pointer;
     }
 
+    button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 45px #9f51c0;
+    
+        &::before {
+        opacity: 1;
+        }
+    }
+
     #registrar{
         background-color: var(--bg-hero);
         color: var(--bg-principal);
     }
 
     #apagar{
-        background-color: var(--texto-dark);
+        background-color: var(--bg-hero);
         color: var(--icon-heart);
     }
 }
