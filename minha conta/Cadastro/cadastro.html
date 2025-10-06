@@ -2,32 +2,35 @@
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Relitera/cadastro</title>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Relitera</title>
+        <meta
+            name="description"
+            content="O site para aprender sobre religiões e culturas diversas, disponibilizando aprendizado por cursos em vídeo e conteúdos escritos. Visando um mundo mais empático."
+        />
+        <link rel="stylesheet" href="cadastro.css" />
+        <link rel="stylesheet" href="global.css" />
+        <script
+            src="https://kit.fontawesome.com/c2b6f6de7d.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="../../components/side-navbar/index.js" type="text/javascript" defer></script>
+        <script src="../../components/top-navbar/index.js" type="text/javascript" defer></script>
     </head>
-    <body>
-        <header class="topbar">
-            <h1 id="titulo">Relitera</h1>
-        </header>
-        <h2 class="destaque">Criar uma conta</h2>
-        <form action="#" method="post">
-            <fieldset>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" placeholder="Nome" required />
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Email" required />
-            <label for="msg">senha</label>
-          <input type="password" id="password" name="password" placeholder="Senha" required >
-            <div class="acoes">
-             <button type="submit">Registrar</button>
-            </div>
-            <div class="acoes">
-             <button type="reset" class="secundario">Voltar</button>
-          </div>
-         </fieldset>
-        </form>
+    <body id="body">
+        <top-navbar></top-navbar>
+        <side-navbar></side-navbar>
+        <h1 class="title">Criar uma conta</h1>
+        <div class="informacoes">
+            <input type="text" id="nomeUsuario" name="nome" placeholder="Nome" required />
+            <input type="date" id="nascimentoUsuario" name="nascimento" placeholder="Data de nascimento" required>
+            <input type="email" id="emailUsuario" name="email" placeholder="Email" required />
+            <input type="password" id="passwordUsuario" name="password" placeholder="Senha" required >
+        </div>
+        <div class="acoes">
+            <button type="submit" id="registrar">Registrar</button>
+            <button type="reset" id="apagar">Apagar</button>
+         </div>
         <div class="alerta" role="alert">
             A senha deve possuir pelo menos 2 números, uma letra maiúscula e um caractere especial.
         </div>
