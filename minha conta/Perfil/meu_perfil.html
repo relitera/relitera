@@ -8,7 +8,7 @@
             name="description"
             content="O site para aprender sobre religiões e culturas diversas, disponibilizando aprendizado por cursos em vídeo e conteúdos escritos. Visando um mundo mais empático."
         />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="meu_perfil.css" />
         <link rel="stylesheet" href="global.css" />
         <script
             src="https://kit.fontawesome.com/c2b6f6de7d.js"
@@ -17,10 +17,32 @@
         <script src="../../components/side-navbar/index.js" type="text/javascript" defer></script>
         <script src="../../components/top-navbar/index.js" type="text/javascript" defer></script>
     </head>
-    <body>
+    <body id="body">
         <top-navbar></top-navbar>
         <side-navbar></side-navbar>
         <h1 class="title">Minha Conta</h1>
-        
+        <div class="fotoPerfil">
+            <img src="../../assets/images/goat.webp" alt="Avatar do usuario">
+        </div>
+        <div class="containers">
+            <div class="botoes">
+                <button class="Cursos">Meus Cursos</button>
+                <button class="Config">Configurações</button>
+                <button class="Pedidos">Meus pedidos</button>
+                <button class="Excluir">Excluir Conta</button>
+            </div>
+            <div class="noticias">
+                <h2>NOTÍCIAS</h2>
+                <a href="">
+                    <img src="../../assets/images/CandombléCurso.jpg" alt="Noticia 1">
+                </a>
+                <a href="">
+                    <img src="../../assets/images/CristianismoCurso.jpg" alt="Noticia 2">
+                </a>
+                <a href="">
+                    <img src="../../assets/images/IslamismoCurso.jpg" alt="Noticia 3">
+                </a>
+            </div>
+        </div>
     </body>
 </html>
