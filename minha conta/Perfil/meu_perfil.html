@@ -2,27 +2,25 @@
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Relitera/conta</title>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Relitera</title>
+        <meta
+            name="description"
+            content="O site para aprender sobre religiões e culturas diversas, disponibilizando aprendizado por cursos em vídeo e conteúdos escritos. Visando um mundo mais empático."
+        />
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="global.css" />
+        <script
+            src="https://kit.fontawesome.com/c2b6f6de7d.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="../../components/side-navbar/index.js" type="text/javascript" defer></script>
+        <script src="../../components/top-navbar/index.js" type="text/javascript" defer></script>
     </head>
     <body>
-        <header class="topbar">
-            <h1 id="titulo">Relitera</h1>
-        </header>
-    <h2 class="destaque">Meu perfil</h2>
-    <div class="acoes">
-            <button type="button">Meus cursos</button>
-        </div>
-        <div class="acoes">
-                <button type="button">Pedidos</button>
-        </div>
-        <div class="acoes">
-                <button type="buttom">Sair</button>
-        </div>
-        <div class="acoes">
-                <button type="button" class="terciario">Excluir conta</button>
-        </div>
+        <top-navbar></top-navbar>
+        <side-navbar></side-navbar>
+        <h1 class="title">Minha Conta</h1>
+        
     </body>
 </html>
