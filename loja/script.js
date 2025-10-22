@@ -1,6 +1,6 @@
-// Funcionalidade da loja
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Menu toggle
+
     const menuToggle = document.querySelector('.menu-toggle');
     
     if (menuToggle) {
@@ -9,11 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Botões dos produtos
+
     const sobreButtons = document.querySelectorAll('.btn-sobre');
     const comprarButtons = document.querySelectorAll('.btn-comprar');
 
-    // Funcionalidade dos botões SOBRE
+
     sobreButtons.forEach(button => {
         button.addEventListener('click', function() {
             const productCard = this.closest('.product-card');
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Funcionalidade dos botões COMPRAR
+  
     comprarButtons.forEach(button => {
         button.addEventListener('click', function() {
             const productCard = this.closest('.product-card');
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const confirmacao = confirm(`Deseja adicionar "${productTitle.textContent}" ao carrinho?`);
                 if (confirmacao) {
                     alert('Produto adicionado ao carrinho com sucesso!');
-                    // Aqui você pode implementar a lógica do carrinho
+                    
                 }
             } else {
                 alert('Este produto estará disponível para compra em breve!');
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Efeito hover nos cards
+    
     const productCards = document.querySelectorAll('.product-card');
     
     productCards.forEach(card => {
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Animação de entrada dos cards
+    
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    // Aplicar animação aos cards
+    
     productCards.forEach(card => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(20px)';
@@ -81,5 +81,3 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(card);
     });
 });
-
-
