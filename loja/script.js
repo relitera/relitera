@@ -1,13 +1,5 @@
 // Funcionalidade da loja
 document.addEventListener('DOMContentLoaded', function() {
-    // Menu toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    
-    if (menuToggle) {
-        menuToggle.addEventListener('click', function() {
-            alert('Menu será implementado em breve!');
-        });
-    }
 
     // Botões dos produtos
     const sobreButtons = document.querySelectorAll('.btn-sobre');

@@ -24,42 +24,7 @@ body {
     line-height: 1.6;
 }
 
-/* Header */
-header {
-    background-color: var(--primary-purple);
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
 
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.menu-toggle {
-    color: var(--white);
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.menu-toggle:hover {
-    transform: scale(1.1);
-}
-
-header h1 {
-    color: var(--white);
-    font-size: 1.5rem;
-    font-weight: 600;
-}
 
 /* Main Content */
 main {
@@ -220,11 +185,5 @@ main {
         font-size: 1.5rem;
     }
     
-    header {
-        padding: 1rem;
-    }
-    
-    header h1 {
-        font-size: 1.2rem;
-    }
+
 }

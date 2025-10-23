@@ -15,7 +15,7 @@ class TopNavbar extends HTMLElement {
           top: 0;
           left: 0;
           width: 250px;
-          background-color: var(--bg-hero);
+          background-color: #934cb2;
           padding: 2rem;
           color: var(--texto-hero);
           box-shadow: 2px 0 20px rgba(0, 0, 0, 0.3);
