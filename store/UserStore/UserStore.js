@@ -1,6 +1,11 @@
 class UserStore {
   constructor() {
-    this.user = null;
+    this.user = {
+      name: "",
+      email: "",
+      id: "",
+      birthdate: null
+    };
     this.loadFromStorage();
   }
 

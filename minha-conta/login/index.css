@@ -171,3 +171,15 @@ body::-webkit-scrollbar {
     font-weight: bold;
   }
 }
+
+#error-message {
+  font-size: 18px;
+  color: red;
+  margin-top: 30px;
+}
+
+#success-message {
+  font-size: 18px;
+  color: rgb(6, 206, 6);
+  margin-top: 30px;
+}

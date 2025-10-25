@@ -1,23 +1,62 @@
+import userStore from "../../store/UserStore/UserStore.js";
+
 const botaoLogin = document.getElementById('login');
 
-botaoLogin.addEventListener('click', function(){
-    const email = document.getElementById('emailUsuario');
-    const senha = document.getElementById('senhaUsuario');
+const getFormValues = () => {
+    const password = document.getElementById("senhaUsuario").value;
+    const email = document.getElementById("emailUsuario").value;
 
-    if ((email.value === "") || (senha.value === "")){
-        if(email.value == ''){
-            alert('Coloque um email válido');
-        }else{
-            alert('Coloque uma senha válida');
+    return {
+        email: email,
+        password: password,
+    }
+}
+
+botaoLogin.addEventListener('click', async function(){
+    try {
+        console.log("loggandi");
+
+        const formData = getFormValues();
+
+        console.log(formData)
+
+        const user = await fetch("http://localhost:8000/user/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
+            body: JSON.stringify(formData),
+        });
+
+        const userRes = await user.json();
+
+        if (!userRes) return
+        console.log(userRes);
+
+        const mensagemErroEl =  document.getElementById("error-message")
+        const mensagemSucessoEl =  document.getElementById("success-message")
+
+        if (userRes.statusCode === 400) {
+
+            mensagemErroEl.textContent = userRes.server_message
         }
-    } else {
-        const emailUsuario = email.value;
-    const senhaUsuario = senha.value;
 
-    email.value = '';
-    senha.value = '';
+        if (userRes.id) {
+            mensagemErroEl.style.display = "none"
+            userStore.setUser(userRes)
 
-    console.log(`Seu email: ${emailUsuario}`);
-    console.log(`Sua senha: ${senhaUsuario}`);
+            localStorage.setItem("user-token", userRes.token)
+        
+            setTimeout(() => {
+                document.location.href = "/"
+            }, 500)
+        }
+
+        console.log(userStore.user)
+    } catch (err) {
+        alerta.innerHTML = "Ocorreu um erro. Tente novamente mais tarde";
+        alerta.classList.remove("alerta");
+        console.error(err);
     }
 })

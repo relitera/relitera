@@ -74,6 +74,8 @@ botaoRegistrar.addEventListener("click", async function () {
     if (newUserRes.statusCode === 400) {
         alerta.innerHTML = newUserRes.client_message;
         alerta.classList.remove("alerta");
+
+        return
     }
 
     if (newUserRes.id) {
