@@ -12,6 +12,7 @@
     --accent-gold: #d4af37;
     --accent-orange: #f39b13;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: 'Roboto', sans-serif;
 }
 
 .sidebar {
