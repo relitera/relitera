@@ -4,6 +4,7 @@ const nome = document.getElementById('nomeUsuario');
 const data = document.getElementById('nascimentoUsuario');
 const email = document.getElementById('emailUsuario');
 const senha = document.getElementById('passwordUsuario');
+const alerta = document.getElementById('alerta');
 
 email.addEventListener('focus', () => {
     email.classList.remove('ok');
@@ -21,6 +22,16 @@ email.addEventListener('blur', () => {
     email.setAttribute("aria-invalid", String(!valido));
     
     botaoRegistrar.disabled = !valido;
+})
+
+senha.addEventListener('focus', () => {
+    alerta.innerHTML = 'A senha deve possuir pelo menos 2 números, uma letra maiúscula e um caractere especial.';
+    alerta.classList.add('alerta')
+})
+
+senha.addEventListener('blur', () => {
+    alerta.innerHTML = '';
+    alerta.classList.remove('alerta');
 })
 
 botaoRegistrar.addEventListener('click', function() {
@@ -62,3 +73,5 @@ function apagar() {
     email.value = '';
     senha.value = '';
 }
+
+//A senha deve possuir pelo menos 2 números, uma letra maiúscula e um caractere especial.
