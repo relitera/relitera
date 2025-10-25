@@ -1,3 +1,5 @@
+import cartStore from "../store/CartStore/CartStore.js";
+
 document.addEventListener("DOMContentLoaded", async function () {
   const coursesGet = await fetch("http://localhost:8000/courses", {
     method: "GET",
@@ -57,7 +59,19 @@ document.addEventListener("DOMContentLoaded", async function () {
 
       const buyButton = document.createElement("button");
       buyButton.className = "btn-comprar";
-      buyButton.textContent = "COMPRAR";
+
+      buyButton.innerHTML = "";
+      
+      const icon = document.createElement("i");
+      icon.className = "fa-solid fa-cart-shopping fa-lg";
+      icon.setAttribute("aria-hidden", "true");
+
+      buyButton.appendChild(icon);
+
+      buyButton.onclick = function () {
+        cartStore.addProduct(course);
+        console.log(cartStore.getCart());
+      };
 
       productButtonsContainer.appendChild(aboutButton);
       productButtonsContainer.appendChild(buyButton);
@@ -85,24 +99,6 @@ document.addEventListener("DOMContentLoaded", async function () {
   closeInfoButton.addEventListener("click", function () {
     const descricaoContainer = document.getElementById("info-curso-container");
     descricaoContainer.style.display = "none";
-  });
-
-  comprarButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      const productCard = this.closest(".product-card");
-      const productTitle = productCard.querySelector(".product-title");
-
-      if (productTitle) {
-        const confirmacao = confirm(
-          `Deseja adicionar "${productTitle.textContent}" ao carrinho?`
-        );
-        if (confirmacao) {
-          alert("Produto adicionado ao carrinho com sucesso!");
-        }
-      } else {
-        alert("Este produto estará disponível para compra em breve!");
-      }
-    });
   });
 
   const productCards = document.querySelectorAll(".product-card");
