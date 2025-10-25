@@ -1,149 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <title>Relitera - Nossa Loja</title>
-        <meta
-            name="description"
-            content="O site para aprender sobre religiões e culturas diversas, disponibilizando aprendizado por cursos em vídeo e conteúdos escritos. Visando um mundo mais empático."
-        />
-        <link rel="stylesheet" href="../global.css" />
-        <link rel="stylesheet" href="style.css" />
-        <script
-            src="https://kit.fontawesome.com/c2b6f6de7d.js"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="../components/top-navbar/index.js"
-            type="text/javascript"
-            defer
-        ></script>
-    </head>
-    <body id="body">
-        <top-navbar></top-navbar>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Relitera - Nossa Loja</title>
+    <meta
+      name="description"
+      content="O site para aprender sobre religiões e culturas diversas, disponibilizando aprendizado por cursos em vídeo e conteúdos escritos. Visando um mundo mais empático."
+    />
+    <link rel="stylesheet" href="../global.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/c2b6f6de7d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="../components/top-navbar/index.js"
+      type="text/javascript"
+      defer
+    ></script>
+  </head>
+  <body id="body">
+    <top-navbar></top-navbar>
 
-        <main>
-            <h2 class="main-title">NOSSA LOJA</h2>
+    <div id="info-curso-container" class="modal-backdrop" style="display:  none;">
+      <div class="descricao-curso-container">
+        <p id="descricao-curso-texto">
+          This is a sample paragraph of text displayed in the modal. It can be
+          any content you want, but for this example, it's just some placeholder
+          text to demonstrate the layout.
+        </p>
+        <button id="closeModalBtn" class="close-btn">Close</button>
+      </div>
+    </div>
 
-            <div class="products-grid">
-                <div class="product-card">
-                    <h3 class="product-title">CANDOMBLÉ I</h3>
-                    <div class="product-image">
-                        <img
-                            src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop"
-                            alt="Candomblé"
-                        />
-                    </div>
-                    <div class="product-buttons">
-                        <button class="btn-sobre">SOBRE</button>
-                        <button class="btn-comprar">COMPRAR</button>
-                    </div>
-                </div>
+    <main>
+      <h2 class="main-title">NOSSA LOJA</h2>
 
-                <div class="product-card">
-                    <h3 class="product-title">CATOLICISMO 1</h3>
-                    <div class="product-image">
-                        <img
-                            src="https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=400&h=300&fit=crop"
-                            alt="Catolicismo"
-                        />
-                    </div>
-                    <div class="product-buttons">
-                        <button class="btn-sobre">SOBRE</button>
-                        <button class="btn-comprar">COMPRAR</button>
-                    </div>
-                </div>
+      <div class="products-grid">
+        <div class="product-card">
+          <h3 class="product-title">Candomblé</h3>
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop"
+              alt="Candomblé"
+            />
+          </div>
+          <div class="product-buttons">
+            <button id="candomble-btn" class="btn-sobre">SOBRE</button>
+            <button class="btn-comprar">COMPRAR</button>
+          </div>
+        </div>
 
-                <div class="product-card">
-                    <h3 class="product-title">UMBANDA 1</h3>
-                    <div class="product-image">
-                        <img
-                            src="https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=400&h=300&fit=crop"
-                            alt="Umbanda"
-                        />
-                    </div>
-                    <div class="product-buttons">
-                        <button class="btn-sobre">SOBRE</button>
-                        <button class="btn-comprar">COMPRAR</button>
-                    </div>
-                </div>
+        <div class="product-card">
+          <h3 class="product-title">Catolicismo</h3>
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=400&h=300&fit=crop"
+              alt="Catolicismo"
+            />
+          </div>
+          <div class="product-buttons">
+            <button id="catolicismo-btn" class="btn-sobre">SOBRE</button>
+            <button class="btn-comprar">COMPRAR</button>
+          </div>
+        </div>
 
-                <div class="product-card">
-                    <h3 class="product-title">BUDISMO 1</h3>
-                    <div class="product-image">
-                        <img
-                            src="https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=400&h=300&fit=crop"
-                            alt="Budismo"
-                        />
-                    </div>
-                    <div class="product-buttons">
-                        <button class="btn-sobre">SOBRE</button>
-                        <button class="btn-comprar">COMPRAR</button>
-                    </div>
-                </div>
+        <div class="product-card">
+          <h3 class="product-title">Umbanda</h3>
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=400&h=300&fit=crop"
+              alt="Umbanda"
+            />
+          </div>
+          <div class="product-buttons">
+            <button id="umbanda-btn" class="btn-sobre">SOBRE</button>
+            <button class="btn-comprar">COMPRAR</button>
+          </div>
+        </div>
 
-                <div class="product-card">
-                    <h3 class="product-title">HINDUIMSO 1</h3>
-                    <div class="product-image">
-                        <img
-                            src="https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=400&h=300&fit=crop"
-                            alt="Hinduismo"
-                        />
-                    </div>
-                    <div class="product-buttons">
-                        <button class="btn-sobre">SOBRE</button>
-                        <button class="btn-comprar">COMPRAR</button>
-                    </div>
-                </div>
+        <div class="product-card">
+          <h3 class="product-title">Budismo</h3>
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=400&h=300&fit=crop"
+              alt="Budismo"
+            />
+          </div>
+          <div class="product-buttons">
+            <button id="budismo-btn" class="btn-sobre">SOBRE</button>
+            <button class="btn-comprar">COMPRAR</button>
+          </div>
+        </div>
 
-                <div class="product-card">
-                    <h3 class="product-title">JUDAISMO 1</h3>
-                    <div class="product-image">
-                        <img
-                            src="https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=400&h=300&fit=crop"
-                            alt="Judaismo"
-                        />
-                    </div>
-                    <div class="product-buttons">
-                        <button class="btn-sobre">SOBRE</button>
-                        <button class="btn-comprar">COMPRAR</button>
-                    </div>
-                </div>
+        <div class="product-card">
+          <h3 class="product-title">Hinduismo</h3>
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=400&h=300&fit=crop"
+              alt="Hinduismo"
+            />
+          </div>
+          <div class="product-buttons">
+            <button id="hinduismo-btn" class="btn-sobre">SOBRE</button>
+            <button class="btn-comprar">COMPRAR</button>
+          </div>
+        </div>
 
-                <div class="product-card">
-                    <h3 class="product-title">JUREMA SAGRADA 1</h3>
-                    <div class="product-image">
-                        <img
-                            src="https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=400&h=300&fit=crop"
-                            alt="Jurema Sagrada"
-                        />
-                    </div>
-                    <div class="product-buttons">
-                        <button class="btn-sobre">SOBRE</button>
-                        <button class="btn-comprar">COMPRAR</button>
-                    </div>
-                </div>
+        <div class="product-card">
+          <h3 class="product-title">Judaismo</h3>
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=400&h=300&fit=crop"
+              alt="Judaismo"
+            />
+          </div>
+          <div class="product-buttons">
+            <button id="judaismo-btn" class="btn-sobre">SOBRE</button>
+            <button class="btn-comprar">COMPRAR</button>
+          </div>
+        </div>
 
-                <div class="product-card">
-                    <h3 class="product-title">QUIMBANDA 1</h3>
-                    <div class="product-image">
-                        <img
-                            src="https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=400&h=300&fit=crop"
-                            alt="Quimbanda"
-                        />
-                    </div>
-                    <div class="product-buttons">
-                        <button class="btn-sobre">SOBRE</button>
-                        <button class="btn-comprar">COMPRAR</button>
-                    </div>
-                </div>
-            </div>
-        </main>
+        <div class="product-card">
+          <h3 class="product-title">Jurema Sagrada</h3>
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=400&h=300&fit=crop"
+              alt="Jurema Sagrada"
+            />
+          </div>
+          <div class="product-buttons">
+            <button id="jurema-btn" class="btn-sobre">SOBRE</button>
+            <button class="btn-comprar">COMPRAR</button>
+          </div>
+        </div>
 
-        <script src="script.js"></script>
-    </body>
+        <div class="product-card">
+          <h3 class="product-title">Quimbanda</h3>
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=400&h=300&fit=crop"
+              alt="Quimbanda"
+            />
+          </div>
+          <div class="product-buttons">
+            <button id="quimbanda-btn" class="btn-sobre">SOBRE</button>
+            <button class="btn-comprar">COMPRAR</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>

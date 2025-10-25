@@ -9,24 +9,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-
     const sobreButtons = document.querySelectorAll('.btn-sobre');
     const comprarButtons = document.querySelectorAll('.btn-comprar');
 
-
     sobreButtons.forEach(button => {
         button.addEventListener('click', function() {
-            const productCard = this.closest('.product-card');
-            const productTitle = productCard.querySelector('.product-title');
-            
-            if (productTitle) {
-                alert(`Informações sobre: ${productTitle.textContent}\n\nEste curso oferece conhecimento aprofundado sobre a religião e cultura apresentada.`);
-            } else {
-                alert('Informações sobre este produto serão disponibilizadas em breve!');
-            }
+            mostrarInfo(button.id)
         });
     });
 
+    const closeInfoButton = document.getElementById("closeModalBtn")
+    closeInfoButton.addEventListener("click", function() {
+        const descricaoContainer = document.getElementById("info-curso-container")
+        descricaoContainer.style.display = "none"
+    })
   
     comprarButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -81,3 +77,39 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(card);
     });
 });
+
+const mostrarInfo = (curso) => {
+    const descricaoElement = document.getElementById("descricao-curso-texto")
+
+    switch(curso) {
+        case 'candomble-btn':
+            descricaoElement.textContent = "Informações do curso de Candomblé"
+            break;
+        case 'catolicismo-btn':
+            descricaoElement.textContent = "Informações do curso de Catolicismo"
+            break;
+        case 'umbanda-btn':
+            descricaoElement.textContent = "Informações do curso de Umbanda"
+            break;
+        case 'budismo-btn':
+            descricaoElement.textContent = "Informações do curso de Budismo"
+            break;
+        case 'hinduismo-btn':
+            descricaoElement.textContent = "Informações do curso de Hinduismo"
+            break;
+        case 'judaismo-btn':
+            descricaoElement.textContent = "Informações do curso de Judaismo"
+            break;
+        case 'jurema-btn':
+            descricaoElement.textContent = "Informações do curso de Jurema"
+            break;
+        case 'quimbanda-btn':
+            descricaoElement.textContent = "Informações do curso de Quimbanda"
+            break;
+        default:
+            descricaoElement.textContent = ""
+    }
+
+    const descricaoContainer = document.getElementById("info-curso-container")
+    descricaoContainer.style.display = "flex"
+}
