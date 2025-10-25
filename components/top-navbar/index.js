@@ -209,7 +209,7 @@ class TopNavbar extends HTMLElement {
           <a href="../index.html"><h1>Relitera</h1></a>
         </div>
         <div class="cart-icone">
-          <a href="../carrinho/index.html">
+          <a href="/carrinho/index.html">
             <i class="fa-solid fa-cart-shopping fa-lg"></i>
           </a>
         </div>
