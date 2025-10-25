@@ -1,4 +1,5 @@
-function Registrar() {
+const botaoLogin = document.getElementById('login');
+botaoLogin.addEventListener('click', function(){
     const email = document.getElementById('emailUsuario');
     const senha = document.getElementById('senhaUsuario');
 
@@ -18,4 +19,4 @@ function Registrar() {
     console.log(`Seu email: ${emailUsuario}`);
     console.log(`Sua senha: ${senhaUsuario}`);
     }
-} 
+})
