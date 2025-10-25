@@ -154,6 +154,7 @@ class TopNavbar extends HTMLElement {
           backdrop-filter: blur(15px);
           -webkit-backdrop-filter: blur(15px);
           position: fixed;
+          height: 80px;
           top: 0;
           left: 0;
           width: 100%;
