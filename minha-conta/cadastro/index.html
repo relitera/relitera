@@ -23,18 +23,20 @@
     <body id="body">
         <top-navbar></top-navbar>
         <side-navbar></side-navbar>
-        <h1 class="title">Criar uma conta</h1>
-        <div class="informacoes">
-            <input type="text" id="nomeUsuario" name="nome" placeholder="Nome" required />
-            <input type="date" id="nascimentoUsuario" name="nascimento" placeholder="Data de nascimento" required>
-            <input type="email" id="emailUsuario" name="email" placeholder="Email" required />
-            <input type="password" id="passwordUsuario" name="password" placeholder="Senha" required >
-            <p id="alerta"></p>
+        <div class="main-container-register">
+            <h1 class="title">Criar uma conta</h1>
+            <div class="informacoes">
+                <input type="text" id="nomeUsuario" name="nome" placeholder="Nome" required />
+                <input type="date" id="nascimentoUsuario" name="nascimento" placeholder="Data de nascimento" required>
+                <input type="email" id="emailUsuario" name="email" placeholder="Email" required />
+                <input type="password" id="passwordUsuario" name="password" placeholder="Senha" required >
+                <p id="alerta"></p>
+            </div>
+            <div class="acoes">
+                <button type="submit" id="registrar">Registrar</button>
+                <button type="reset" id="apagar">Apagar</button>
+            </div>
         </div>
-        <div class="acoes">
-            <button type="submit" id="registrar">Registrar</button>
-            <button type="reset" id="apagar">Apagar</button>
-         </div>
         </main>
         <script type="module" src="index.js"></script>
     </body>

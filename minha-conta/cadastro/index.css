@@ -31,7 +31,7 @@
     --accent-gold-hover: #b8941f;
     --accent-orange: #f39b13;
     --accent-orange-hover: #e67e22;
-    --icon-heart: #e74c3c;
+    --icon-heart: #f78e8e;
     --icon-leaf: #27ae60;
     --icon-yin-yang: #2c3e50;
     --shadow-soft: 0 10px 30px rgba(147, 76, 178, 0.2);
@@ -43,6 +43,7 @@
 
 html {
     /* Esconder scrollbar */
+    height: 100%;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -52,6 +53,7 @@ html::-webkit-scrollbar {
 }
 
 body {
+    height: 100%;
     background-color: var(--bg-principal);
     color: var(--texto);
     font-family: "Roboto";
@@ -65,31 +67,38 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+.main-container-register {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .title {
     font-size: 50pt;
     font-weight: bold;
     color: var(--texto-dark);
-    margin-top: 120px;
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
 }
 
 .informacoes {
-    display: grid;
-    grid-template-columns: auto;
-    gap: 30px;
-    margin-left: 400px;
-    margin-right: 400px;
-    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
 
     input {
-        background-color: var(--bg-hero);
-        border: none;
-        border-radius: 30px;
+        width: 340px;
+        height: 60px;
         padding: 20px;
-        text-align: center;
-        font-size: larger;
+        border: 2px solid #934cb2;
+        color: #1a1a1a;
+        font-size: large;
+        border-radius: 20px;
     }
 
     input::placeholder{
@@ -107,13 +116,19 @@ body::-webkit-scrollbar {
 .acoes{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
 
     button{
+        border: none;
+        border-radius: 20px;
+        padding: 5px;
+        background-color: var(--bg-hero);
+        color: var(--bg-principal);
         font-size: larger;
-        padding: 15px;
-        border:  none;
-        border-radius: 30px;
+        width: 250px;
+        height: 60px;
         cursor: pointer;
     }
 
