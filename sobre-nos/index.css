@@ -22,55 +22,7 @@ a {
 a:hover {
     text-decoration: underline;
 }
-.banner {
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #9147b4;
-    padding: 0 24px;
-    height: 56px;
-    position: relative;
-}
 
-.menu-icon {
-    font-size: 2rem;
-    color: #fff;
-    cursor: pointer;
-}
-
-.banner-title {
-    color: #fff;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-left: 16px;
-}
-
-.cart-icon {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.cart-icon svg {
-    display: block;
-}
-
-.cart-badge {
-    position: absolute;
-    top: 2px;
-    right: 2px;
-    background: #ff5722;
-    color: #fff;
-    font-size: 0.9rem;
-    border-radius: 50%;
-    width: 18px;
-    height: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-}
 .hero {
     z-index: 0;
     position: relative;
@@ -79,20 +31,21 @@ a:hover {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    box-shadow: 0 4px 16px -4px #1F1F1F;
+    box-shadow: none /*0 4px 16px -4px #1F1F1F*/;
 }
 
 .hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: #9147b4; /* roxo sólido com transparência */
-    z-index: 1;
+    /*background-color: #9147b4;*/ /* roxo sólido com transparência */
+    z-index: -1;
 }
 
 .hero h1 {
+    padding-top: 40px;
     position: relative;
-    color: #fff;
+    color: #9147b4;
     z-index: 2;
     font-size: 3rem;
     text-align: center;
@@ -112,6 +65,7 @@ a:hover {
 }
 
 .h2-row h2 {
+    color: #9147b4;
     margin-bottom: 12px;
 }
 
