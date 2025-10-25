@@ -1,10 +1,10 @@
 class TopNavbar extends HTMLElement {
-  constructor() {
-    super();
-  }
+    constructor() {
+        super();
+    }
 
-  connectedCallback() {
-    this.innerHTML = `
+    connectedCallback() {
+        this.innerHTML = `
       <script src="https://kit.fontawesome.com/c2b6f6de7d.js" crossorigin="anonymous"></script>
       
       <style>
@@ -108,37 +108,45 @@ class TopNavbar extends HTMLElement {
           display: flex;
           align-items: center;
           gap: 1rem;
-          .cart-icone {
-            background: linear-gradient(135deg, #af79c4 0%, #934cb2 100%);
-            padding: 12px;
+        .cart-icone {
+          background: linear-gradient(135deg, #af79c4 0%, #934cb2 100%);
+          padding: 12px;
+          border-radius: 50%;
+          transition: var(--transition);
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            width: 8px;
+            height: 8px;
+            background: var(--accent-orange);
             border-radius: 50%;
+            opacity: 0;
+            transform: scale(0);
             transition: var(--transition);
-            position: relative;
+          }
+
+          &:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(175, 121, 196, 0.4);
 
             &::before {
-              content: "";
-              position: absolute;
-              top: -2px;
-              right: -2px;
-              width: 8px;
-              height: 8px;
-              background: var(--accent-orange);
-              border-radius: 50%;
-              opacity: 0;
-              transform: scale(0);
-              transition: var(--transition);
-            }
-
-            &:hover {
-              transform: scale(1.1);
-              box-shadow: 0 4px 15px rgba(175, 121, 196, 0.4);
-
-              &::before {
-                opacity: 1;
-                transform: scale(1);
-              }
+              opacity: 1;
+              transform: scale(1);
             }
           }
+
+          a {
+            color: inherit;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
         }
 
         .top-navbar-container {
@@ -197,11 +205,13 @@ class TopNavbar extends HTMLElement {
 
       <div class="top-navbar-container">
         <div class="header-esq">
-          <i id="aaaa" class="fa-solid fa-bars fa-lg"></i>
-          <a href="./index.html"><h1>Relitera</h1></a>
+          <i class="fa-solid fa-bars fa-lg"></i>
+          <a href="../index.html"><h1>Relitera</h1></a>
         </div>
         <div class="cart-icone">
-          <i class="fa-solid fa-cart-shopping fa-lg"></i>
+          <a href="../carrinho/index.html">
+            <i class="fa-solid fa-cart-shopping fa-lg"></i>
+          </a>
         </div>
       </div>
 
@@ -214,22 +224,21 @@ class TopNavbar extends HTMLElement {
         </div>
         <ul>
           <li>
-            <a href="index.html">
+            <a href="/index.html">
               <i class="fa-solid fa-home"></i>Início
             </a>
           </li>
-          <!-- TODO: Adicionar links corretos para as páginas -->
           <li>
-            <a><i class="fa-solid fa-users"></i>Quem Somos</a>
+            <a href="/sobre-nos/index.html"><i class="fa-solid fa-users"></i>Quem Somos</a>
           </li>
           <li>
-            <a><i class="fa-solid fa-store"></i>Loja</a>
+            <a href="/loja/index.html"><i class="fa-solid fa-store"></i>Loja</a>
           </li>
           <li>
-            <a><i class="fa-solid fa-user"></i>Minha Conta</a>
+            <a href="/minha-conta/login/index.html"><i class="fa-solid fa-user"></i>Minha Conta</a>
           </li>
           <li>
-            <a><i class="fa-solid fa-graduation-cap"></i>Plataforma</a>
+            <a href="/carrinho/index.html"><i class="fa-solid fa-cart-shopping"></i>Carrinho</a>
           </li>
         </ul>
       </div>
@@ -237,44 +246,44 @@ class TopNavbar extends HTMLElement {
       <div class="sidebar-backdrop"></div>
     `;
 
-    this.attachEventListeners();
-  }
+        this.attachEventListeners();
+    }
 
-  toggleSidebar() {
-    console.log("here");
-    const sidebar = this.querySelector(".sidebar");
-    const backdrop = this.querySelector(".sidebar-backdrop");
-    sidebar.classList.toggle("open");
-    backdrop.classList.toggle("active");
-    document.body.classList.toggle("disable-scroll");
-  }
-
-  closeSidebar() {
-    const sidebar = this.querySelector(".sidebar");
-    const backdrop = this.querySelector(".sidebar-backdrop");
-    sidebar.classList.remove("open");
-    backdrop.classList.remove("active");
-    document.body.classList.remove("disable-scroll");
-  }
-
-  attachEventListeners() {
-    const sidebarToggle = this.querySelector("#aaaa");
-    const sidebarClose = this.querySelector(".sidebar-close");
-    const backdrop = this.querySelector(".sidebar-backdrop");
-
-    sidebarToggle.addEventListener("click", () => this.toggleSidebar());
-    sidebarClose.addEventListener("click", () => this.closeSidebar());
-    backdrop.addEventListener("click", () => this.closeSidebar());
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") {
+    toggleSidebar() {
+        console.log("here");
         const sidebar = this.querySelector(".sidebar");
-        if (sidebar.classList.contains("open")) {
-          this.closeSidebar();
-        }
-      }
-    });
-  }
+        const backdrop = this.querySelector(".sidebar-backdrop");
+        sidebar.classList.toggle("open");
+        backdrop.classList.toggle("active");
+        document.body.classList.toggle("disable-scroll");
+    }
+
+    closeSidebar() {
+        const sidebar = this.querySelector(".sidebar");
+        const backdrop = this.querySelector(".sidebar-backdrop");
+        sidebar.classList.remove("open");
+        backdrop.classList.remove("active");
+        document.body.classList.remove("disable-scroll");
+    }
+
+    attachEventListeners() {
+        const sidebarToggle = this.querySelector(".fa-bars");
+        const sidebarClose = this.querySelector(".sidebar-close");
+        const backdrop = this.querySelector(".sidebar-backdrop");
+
+        sidebarToggle.addEventListener("click", () => this.toggleSidebar());
+        sidebarClose.addEventListener("click", () => this.closeSidebar());
+        backdrop.addEventListener("click", () => this.closeSidebar());
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") {
+                const sidebar = this.querySelector(".sidebar");
+                if (sidebar.classList.contains("open")) {
+                    this.closeSidebar();
+                }
+            }
+        });
+    }
 }
 
 customElements.define("top-navbar", TopNavbar);
