@@ -37,19 +37,7 @@ senha.addEventListener('blur', () => {
 botaoRegistrar.addEventListener('click', function() {
 
     if((nome.value === '')||(data.value === '')||(email.value === '')||(senha.value === '')) {
-        if(nome.value === ''){
-            alert("Coloque um nome válido!");
-        } else {
-            if(data.value === ''){
-                alert("Coloque uma data válida!");
-            } else {
-                if(email.value === '') {
-                    alert("Coloque um email válido!");
-                } else{
-                    alert("Coloque uma senha válida");
-                }
-            }
-        }
+        alert("Preencha todos requisitos");
     } else {
         const nomeUsuario = nome.value;
         const dataUsuario = data.value;
