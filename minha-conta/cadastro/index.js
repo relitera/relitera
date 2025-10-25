@@ -1,7 +1,7 @@
-//document.getElementById('registrar').onclick('regitrar()');
-//document.getElementById('apagar').onclick('apagar()');
+const botaoApagar = document.getElementById("apagar");
+const botaoRegistrar = document.getElementById("registrar");
 
-function registrar() {
+botaoRegistrar.addEventListener('click', function() {
     const nome = document.getElementById('nomeUsuario');
     const data = document.getElementById('nascimentoUsuario');
     const email = document.getElementById('emailUsuario');
@@ -33,7 +33,9 @@ function registrar() {
         console.log(senhaUsuario);
         apagar();
     }
-}
+})
+
+botaoApagar.addEventListener('click', apagar);
 
 function apagar() {
     const nome = document.getElementById('nomeUsuario');
