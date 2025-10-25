@@ -144,4 +144,16 @@ body::-webkit-scrollbar {
     border: 1px solid #f1c4c1;
     background: #fdecec;
     color: var(--cor-erro);
-    }
+}
+
+.ok{
+    color: var(--icon-leaf);
+}
+
+.erro{
+    color: var(--icon-heart);
+}
+
+.averiguando{
+    color: var(--accent-gold-hover);
+}

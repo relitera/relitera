@@ -1,4 +1,5 @@
 const botaoLogin = document.getElementById('login');
+
 botaoLogin.addEventListener('click', function(){
     const email = document.getElementById('emailUsuario');
     const senha = document.getElementById('senhaUsuario');

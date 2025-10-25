@@ -1,11 +1,29 @@
 const botaoApagar = document.getElementById("apagar");
 const botaoRegistrar = document.getElementById("registrar");
+const nome = document.getElementById('nomeUsuario');
+const data = document.getElementById('nascimentoUsuario');
+const email = document.getElementById('emailUsuario');
+const senha = document.getElementById('passwordUsuario');
+
+email.addEventListener('focus', () => {
+    email.classList.remove('ok');
+    email.classList.remove('erro');
+    email.classList.add('averiguando');
+})
+
+email.addEventListener('blur', () => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    email.classList.remove('averiguando');
+
+    const valido = regex.test(email.value.trim());
+    email.classList.toggle("erro", !valido);
+    email.classList.toggle("ok", valido);
+    email.setAttribute("aria-invalid", String(!valido));
+    
+    botaoRegistrar.disabled = !valido;
+})
 
 botaoRegistrar.addEventListener('click', function() {
-    const nome = document.getElementById('nomeUsuario');
-    const data = document.getElementById('nascimentoUsuario');
-    const email = document.getElementById('emailUsuario');
-    const senha = document.getElementById('passwordUsuario');
 
     if((nome.value === '')||(data.value === '')||(email.value === '')||(senha.value === '')) {
         if(nome.value === ''){
@@ -38,10 +56,6 @@ botaoRegistrar.addEventListener('click', function() {
 botaoApagar.addEventListener('click', apagar);
 
 function apagar() {
-    const nome = document.getElementById('nomeUsuario');
-    const data = document.getElementById('nascimentoUsuario');
-    const email = document.getElementById('emailUsuario');
-    const senha = document.getElementById('passwordUsuario');
 
     nome.value = '';
     data.value = '';
