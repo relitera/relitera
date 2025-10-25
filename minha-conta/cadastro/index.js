@@ -61,5 +61,3 @@ function apagar() {
     email.value = '';
     senha.value = '';
 }
-
-//A senha deve possuir pelo menos 2 números, uma letra maiúscula e um caractere especial.
