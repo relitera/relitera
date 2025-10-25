@@ -235,7 +235,7 @@ class TopNavbar extends HTMLElement {
             <a href="/loja/index.html"><i class="fa-solid fa-store"></i>Loja</a>
           </li>
           <li>
-            <a href="/minha-conta/login/index.html"><i class="fa-solid fa-user"></i>Minha Conta</a>
+            <a id="minha-conta-link"><i class="fa-solid fa-user"></i>Minha Conta</a>
           </li>
           <li>
             <a href="/carrinho/index.html"><i class="fa-solid fa-cart-shopping"></i>Carrinho</a>
@@ -247,6 +247,13 @@ class TopNavbar extends HTMLElement {
     `;
 
         this.attachEventListeners();
+        this.configureAccountLink()
+    }
+
+    configureAccountLink() {
+      const accountLink = document.getElementById("minha-conta-link")
+
+      accountLink.href = "/minha-conta/perfil/index.html"
     }
 
     toggleSidebar() {
