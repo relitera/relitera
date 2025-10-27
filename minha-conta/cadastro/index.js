@@ -58,7 +58,7 @@ botaoRegistrar.addEventListener("click", async function () {
 
     console.log(formData)
 
-    const newUser = await fetch("http://localhost:8000/user", {
+    const newUser = await fetch("https://relitera-api.onrender.com/user", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
