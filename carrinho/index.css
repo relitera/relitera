@@ -117,32 +117,33 @@ body::-webkit-scrollbar {
         font-weight: 1000;
         font-size: xx-large;
     }
+}
 
-    button {
-        width: 150px;
-        height: 25px;
-        border-radius: 8px;
-        border: none;
+.botoesLoja{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    
+    button{
+    width: 200px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
     }
 
     #Limpar {
-        width: 200px;
-        height: 40px;
         background-color: rgb(179, 179, 179);
         color: rgb(0, 0, 0);
         font-size: 16px;
         font-weight: 800;
-        margin-right: 10px;
     }
 
     #Finalizar {
-        width: 200px;
-        height: 40px;
         background-color: #934cb2;
         color: #ffffff;
         font-size: 16px;
         font-weight: 800;
-        margin-left: 10px;
     }
 }
 
@@ -183,7 +184,7 @@ body::-webkit-scrollbar {
     margin: 80px;
     text-align: center;
     color: #934cb2;
-    font-size: large;
+    font-size: 30pt;
 }
 
 .sidebar {
@@ -224,4 +225,16 @@ body::-webkit-scrollbar {
     color: white;
     cursor: pointer;
     background-color: #f70d1a;
+}
+
+@media (max-width: 600px){
+    .title{
+        font-size: 15pt;
+    }
+    
+    .botoesLoja{
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
 }
