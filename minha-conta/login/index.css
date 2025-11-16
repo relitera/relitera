@@ -183,3 +183,30 @@ body::-webkit-scrollbar {
   color: rgb(6, 206, 6);
   margin-top: 30px;
 }
+
+@media (max-width: 600px){
+  .main-container-login{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .title{
+    font-size: 25pt;
+    margin-top: 100px;
+  }
+
+  .input{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .buttons{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .registro{
+    margin-top: 5px;
+  }
+}
