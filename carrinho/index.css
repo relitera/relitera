@@ -229,7 +229,8 @@ body::-webkit-scrollbar {
 
 @media (max-width: 600px){
     .title{
-        font-size: 15pt;
+        font-size: 20pt;
+        margin-bottom: 40px;
     }
     
     .botoesLoja{
