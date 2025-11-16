@@ -227,7 +227,7 @@ body::-webkit-scrollbar {
     background-color: #f70d1a;
 }
 
-@media (max-width: 600px){
+@media (max-width: 768px){
     .title{
         font-size: 20pt;
         margin-bottom: 40px;

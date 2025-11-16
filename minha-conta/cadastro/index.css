@@ -173,7 +173,7 @@ body::-webkit-scrollbar {
     color: var(--accent-gold-hover);
 }
 
-@media (max-width: 600px){
+@media (max-width: 768px){
     .title{
         font-size: 25pt;
         margin-top: 75px;
