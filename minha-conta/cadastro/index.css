@@ -172,3 +172,10 @@ body::-webkit-scrollbar {
 .averiguando{
     color: var(--accent-gold-hover);
 }
+
+@media (max-width: 600px){
+    .title{
+        font-size: 25pt;
+        margin-top: 75px;
+    }
+}
