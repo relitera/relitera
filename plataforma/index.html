@@ -1,1 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relitera</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <button class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="logo">
+                <div class="logo-circle">
+                    <span class="logo-text">R</span>
+                </div>
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+            <button class="notification-btn">
+                <i class="fas fa-bell"></i>
+            </button>
+            <div class="user-avatar">
+                <img src="https://via.placeholder.com/40x40/4A90E2/FFFFFF?text=U" alt="Usuário">
+            </div>
+        </div>
+    </header>
+
+    <section class="main-banner">
+        <div class="banner-content">
+            <div class="banner-left">
+                <button class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <h1 class="course-title">Plataforma Relitera</h1>
+                <p class="course-description">
+                    A Plataforma Relitera é um espaço de aprendizado espiritual completo, focado em diferentes tradições religiosas e espirituais. Explore o cristianismo, candomblé, umbanda, espiritismo e muito mais...
+                    <a href="#" class="show-more">Mostrar mais</a>
+                </p>
+                <div class="progress-info">
+                    <span class="progress-text">43/2929 conteúdos — 2%</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 2%"></div>
+                    </div>
+                </div>
+                <button class="continue-btn">Continuar assistindo</button>
+            </div>
+            <div class="banner-right">
+                <div class="course-visual">
+                    <div class="visual-bg">
+                        <div class="visual-symbol">R</div>
+                    </div>
+                    <div class="video-placeholder">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <nav class="nav-tabs">
+        <button class="tab active" data-tab="conteudos">Conteúdos</button>
+        <button class="tab" data-tab="trilhas">Trilhas</button>
+        <button class="tab" data-tab="sobre">Sobre</button>
+    </nav>
+
+    <main class="main-content">
+        <div class="content-header">
+            <h2 class="section-title">Trilhas</h2>
+            <a href="#" class="show-all-link">Mostrar todos (10) <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="courses-grid">
+            <div class="course-card" data-course="cristianismo">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/300x200/FF6B6B/FFFFFF?text=Cristianismo" alt="Cristianismo">
+                    <div class="card-tag">
+                        <i class="fas fa-cross"></i>
+                        <span>Trilha</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Cristianismo</h3>
+                    <p class="card-subtitle">Comece Aqui!</p>
+                </div>
+            </div>
+
+            <div class="course-card" data-course="candomble">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/300x200/4ECDC4/FFFFFF?text=Candomblé" alt="Candomblé">
+                    <div class="card-tag">
+                        <i class="fas fa-leaf"></i>
+                        <span>Trilha</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Candomblé</h3>
+                    <p class="card-subtitle">TRADIÇÃO</p>
+                </div>
+            </div>
+
+            <div class="course-card" data-course="umbanda">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/300x200/FFD93D/000000?text=Umbanda" alt="Umbanda">
+                    <div class="card-tag">
+                        <i class="fas fa-star"></i>
+                        <span>Trilha</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">UMBANDA</h3>
+                    <p class="card-subtitle">BRASILEIRA</p>
+                </div>
+            </div>
+
+            <div class="course-card" data-course="espiritismo">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/300x200/9B59B6/FFFFFF?text=Espiritismo" alt="Espiritismo">
+                    <div class="card-tag">
+                        <i class="fas fa-dove"></i>
+                        <span>Trilha</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Espiritismo &</h3>
+                    <p class="card-subtitle">MEDIUNIDADE</p>
+                </div>
+            </div>
+
+            <div class="course-card" data-course="budismo">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/300x200/3498DB/FFFFFF?text=Budismo" alt="Budismo">
+                    <div class="card-tag">
+                        <i class="fas fa-yin-yang"></i>
+                        <span>Trilha</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Budismo</h3>
+                    <p class="card-subtitle">ZEN</p>
+                </div>
+            </div>
+
+            <div class="course-card" data-course="hinduismo">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/300x200/87CEEB/000000?text=Hinduísmo" alt="Hinduísmo">
+                    <div class="card-tag">
+                        <i class="fas fa-om"></i>
+                        <span>Trilha</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Hinduísmo</h3>
+                    <p class="card-subtitle">VEDAS</p>
+                </div>
+            </div>
+
+            <div class="course-card" data-course="islamismo">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/300x200/E67E22/FFFFFF?text=Islamismo" alt="Islamismo">
+                    <div class="card-tag">
+                        <i class="fas fa-moon"></i>
+                        <span>Trilha</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Islamismo</h3>
+                    <p class="card-subtitle">ISLAM</p>
+                </div>
+            </div>
+
+            <div class="course-card" data-course="judaismo">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/300x200/E74C3C/FFFFFF?text=Judaísmo" alt="Judaísmo">
+                    <div class="card-tag">
+                        <i class="fas fa-star-of-david"></i>
+                        <span>Trilha</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Judaísmo</h3>
+                    <p class="card-subtitle">TORÁ</p>
+                </div>
+            </div>
+
+            <div class="course-card" data-course="wicca">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/300x200/8E44AD/FFFFFF?text=Wicca" alt="Wicca">
+                    <div class="card-tag">
+                        <i class="fas fa-magic"></i>
+                        <span>Trilha</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Wicca</h3>
+                    <p class="card-subtitle">BRUXARIA</p>
+                </div>
+            </div>
+
+            <div class="course-card" data-course="meditacao">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/300x200/2ECC71/FFFFFF?text=Meditação" alt="Meditação">
+                    <div class="card-tag">
+                        <i class="fas fa-lotus"></i>
+                        <span>Trilha</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Meditação</h3>
+                    <p class="card-subtitle">MINDFULNESS</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="scroll-arrow">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </main>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Buscar conteúdo" class="search-input">
+        <i class="fas fa-search search-icon"></i>
+    </div>
+
+    <div class="course-popup" id="coursePopup">
+        <div class="popup-content">
+            <h3 class="popup-title">(MÓDULO OBRIGATÓRIO) Comece por aqui!</h3>
+            <button class="popup-btn">Acessar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
