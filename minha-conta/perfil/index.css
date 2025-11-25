@@ -118,6 +118,11 @@ body::-webkit-scrollbar {
         width: 250px;
         height: 60px;
         cursor: pointer;
+
+        a{
+            color: var(--bg-principal);
+            text-decoration: none;
+        }
     }
 
     button:hover{
