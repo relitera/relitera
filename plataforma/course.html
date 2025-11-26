@@ -10,7 +10,7 @@
 <body>
     <header class="header">
         <div class="header-left">
-            <button class="menu-btn" onclick="goBack()">
+            <button class="menu-btn" onclick="window.location.href = `${window.location.origin}/minha-conta/meuscursos/index.html`;">
                 <i class="fas fa-arrow-left"></i>
             </button>
             <div class="logo">
@@ -40,7 +40,7 @@
                     </div>
                 </div>
 
-c                <div class="lesson-info">
+                <div class="lesson-info">
                     <h3>Informações da aula</h3>
                     <div class="description-section">
                         <h4>Descrição</h4>
@@ -113,148 +113,6 @@ c                <div class="lesson-info">
         </div>
     </div>
 
-    <script src="script.js"></script>
-    <script>
-        // Função para voltar à página principal
-        function goBack() {
-            window.location.href = `${window.location.origin}/minha-conta/meuscursos/index.html`;
-        }
-
-        // Dados dos cursos espirituais
-        const courseData = {
-            'cristianismo': {
-                title: 'Como estudar pela Plataforma Relitera - Cristianismo',
-                description: 'Nesta aula você aprenderá como navegar pela plataforma Relitera e aproveitar ao máximo os recursos espirituais disponíveis para o estudo do cristianismo.',
-                trailName: 'Cristianismo',
-                youtubeId: 'dQw4w9WgXcQ', // Substitua pelo ID do seu vídeo
-                lessons: [
-                    { title: 'Como estudar pela Plataforma Relitera', progress: 0 },
-                    { title: 'Fundamentos do Cristianismo', progress: 0 },
-                    { title: 'Estudo da Bíblia', progress: 0 },
-                    { title: 'Oração e Meditação Cristã', progress: 0 },
-                    { title: 'História da Igreja', progress: 0 }
-                ]
-            },
-            'candomble': {
-                title: 'Como estudar pela Plataforma Relitera - Candomblé',
-                description: 'Nesta aula você aprenderá como navegar pela plataforma Relitera e aproveitar ao máximo os recursos espirituais disponíveis para o estudo do candomblé.',
-                trailName: 'Candomblé',
-                youtubeId: '3fNRA0dTpCs', // Vídeo sobre Candomblé
-                lessons: [
-                    { title: 'Como estudar pela Plataforma Relitera', progress: 0 },
-                    { title: 'Fundamentos do Candomblé', progress: 0 },
-                    { title: 'Os Orixás', progress: 0 },
-                    { title: 'Rituais e Cerimônias', progress: 0 },
-                    { title: 'Tradições Africanas', progress: 0 }
-                ]
-            },
-            'umbanda': {
-                title: 'Como estudar pela Plataforma Relitera - Umbanda',
-                description: 'Nesta aula você aprenderá como navegar pela plataforma Relitera e aproveitar ao máximo os recursos espirituais disponíveis para o estudo da umbanda.',
-                trailName: 'Umbanda',
-                lessons: [
-                    { title: 'Como estudar pela Plataforma Relitera', progress: 0 },
-                    { title: 'Fundamentos da Umbanda', progress: 0 },
-                    { title: 'Entidades Espirituais', progress: 0 },
-                    { title: 'Trabalhos Espirituais', progress: 0 },
-                    { title: 'Desenvolvimento Mediúnico', progress: 0 }
-                ]
-            },
-            'espiritismo': {
-                title: 'Como estudar pela Plataforma Relitera - Espiritismo',
-                description: 'Nesta aula você aprenderá como navegar pela plataforma Relitera e aproveitar ao máximo os recursos espirituais disponíveis para o estudo do espiritismo.',
-                trailName: 'Espiritismo',
-                lessons: [
-                    { title: 'Como estudar pela Plataforma Relitera', progress: 0 },
-                    { title: 'Fundamentos do Espiritismo', progress: 0 },
-                    { title: 'O Livro dos Espíritos', progress: 0 },
-                    { title: 'Mediunidade', progress: 0 },
-                    { title: 'Reencarnação', progress: 0 }
-                ]
-            },
-            'budismo': {
-                title: 'Como estudar pela Plataforma Relitera - Budismo',
-                description: 'Nesta aula você aprenderá como navegar pela plataforma Relitera e aproveitar ao máximo os recursos espirituais disponíveis para o estudo do budismo.',
-                trailName: 'Budismo',
-                lessons: [
-                    { title: 'Como estudar pela Plataforma Relitera', progress: 0 },
-                    { title: 'Fundamentos do Budismo', progress: 0 },
-                    { title: 'Os Quatro Nobres Verdades', progress: 0 },
-                    { title: 'Meditação Zen', progress: 0 },
-                    { title: 'Caminho Óctuplo', progress: 0 }
-                ]
-            }
-        };
-
-        // Carregar dados do curso baseado na URL
-        function loadCourseData() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const courseId = urlParams.get('course') || 'cristianismo';
-            
-            if (courseData[courseId]) {
-                const course = courseData[courseId];
-                document.getElementById('courseTitle').textContent = course.title;
-                document.getElementById('lessonDescription').textContent = course.description;
-                document.getElementById('trailName').textContent = course.trailName;
-                
-                // Carregar vídeo do YouTube
-                if (course.youtubeId) {
-                    const iframe = document.getElementById('youtubeVideo');
-                    iframe.src = `https://www.youtube.com/embed/${course.youtubeId}`;
-                }
-                
-                // Atualizar lista de aulas
-                const lessonsList = document.querySelector('.lessons-list');
-                lessonsList.innerHTML = '';
-                
-                course.lessons.forEach((lesson, index) => {
-                    const lessonItem = document.createElement('div');
-                    lessonItem.className = `lesson-item ${index === 0 ? 'active' : ''}`;
-                    lessonItem.setAttribute('data-lesson', index + 1);
-                    
-                    lessonItem.innerHTML = `
-                        <div class="lesson-number">${index + 1}</div>
-                        <div class="lesson-content">
-                            <div class="lesson-title">${lesson.title}</div>
-                            <div class="lesson-progress">${lesson.progress}%</div>
-                        </div>
-                        <div class="lesson-status">
-                            <i class="fas fa-${index === 0 ? 'check' : 'lock'}"></i>
-                        </div>
-                    `;
-                    
-                    lessonsList.appendChild(lessonItem);
-                });
-            }
-        }
-
-        // Inicializar quando a página carregar
-        document.addEventListener('DOMContentLoaded', function() {
-            loadCourseData();
-            
-            // Adicionar event listeners
-            const lessonItems = document.querySelectorAll('.lesson-item');
-            lessonItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    // Remover active de todos
-                    lessonItems.forEach(li => li.classList.remove('active'));
-                    // Adicionar active ao clicado
-                    this.classList.add('active');
-                });
-            });
-
-            const completeBtn = document.querySelector('.complete-btn');
-            completeBtn.addEventListener('click', function() {
-                alert('Aula concluída! +10 pontos ganhos!');
-                this.style.backgroundColor = '#2ECC71';
-                this.innerHTML = '<i class="fas fa-check"></i> Concluído';
-            });
-
-            const playButton = document.querySelector('.play-button');
-            playButton.addEventListener('click', function() {
-                alert('Iniciando vídeo... (Simulação)');
-            });
-        });
-    </script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>

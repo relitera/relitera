@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       continueToWatch.textContent = "Assistir";
 
       continueToWatch.addEventListener("click", () => {
-        window.location.href = `${window.location.origin}/plataforma/course.html?course=Candomble`;
+        window.location.href = `${window.location.origin}/plataforma/course.html?course_id=${course.id}&course_name=${course.name}`;
       })
      
       productButtonsContainer.appendChild(continueToWatch);
