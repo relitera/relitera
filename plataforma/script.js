@@ -104,7 +104,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     <a href="#" class="nav-link">Dashboard</a>
                     <a href="#" class="nav-link">Meus Cursos</a>
                     <a href="#" class="nav-link">Progresso</a>
-                    <a href="#" class="nav-link">Configurações</a>
                 </nav>
             </div>
         `;
