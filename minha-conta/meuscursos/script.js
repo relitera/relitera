@@ -48,6 +48,10 @@ document.addEventListener("DOMContentLoaded", async function () {
       continueToWatch.id = buttonId;
       continueToWatch.className = "btn-continue-watch";
       continueToWatch.textContent = "Assistir";
+
+      continueToWatch.addEventListener("click", () => {
+        window.location.href = `${window.location.origin}/plataforma/course.html?course=Candomble`;
+      })
      
       productButtonsContainer.appendChild(continueToWatch);
 
