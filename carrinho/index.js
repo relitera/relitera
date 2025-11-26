@@ -12,14 +12,9 @@ function createCartItem(id, name, quantity) {
 
     const nomeH1 = document.createElement('h1');
     nomeH1.id = 'info-item-carrinho-nome';
-    nomeH1.textContent = `${name} -`;
-
-    const qtdH1 = document.createElement('h1');
-    qtdH1.id = 'info-item-carrinho-qtd';
-    qtdH1.textContent = `${quantity}x`; 
+    nomeH1.textContent = `${name}`;
 
     infoItemCarrinho.appendChild(nomeH1);
-    infoItemCarrinho.appendChild(qtdH1);
 
     const removerBtn = document.createElement('button');
     removerBtn.id = 'remover-item-btn';
