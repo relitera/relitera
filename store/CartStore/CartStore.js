@@ -26,7 +26,7 @@ class CartStore {
         jaAdicionado =  true
         return {
           ...product,
-          quantity: product.quantity ? product.quantity + 1 : 0
+          quantity: 1
         }
       }
 
