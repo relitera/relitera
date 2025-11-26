@@ -20,7 +20,7 @@ botaoLogin.addEventListener('click', async function(){
 
         console.log(formData)
 
-        const user = await fetch("https://relitera-api.onrender.com/user/login", {
+        const user = await fetch("http://localhost:8000/user/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

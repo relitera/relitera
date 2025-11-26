@@ -1,7 +1,7 @@
 import cartStore from "../store/CartStore/CartStore.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
-  const coursesGet = await fetch("https://relitera-api.onrender.com/courses", {
+  const coursesGet = await fetch("http://localhost:8000/courses", {
     method: "GET",
   });
 

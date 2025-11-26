@@ -1,4 +1,5 @@
 import cartStore from "../store/CartStore/CartStore.js"
+import userStore from "../../store/UserStore/UserStore.js";
 
 function createCartItem(id, name, quantity) {
     if (!id || !name || !quantity) return
@@ -45,7 +46,11 @@ const updateCart = () => {
 
     const carrinhoVazioText = document.getElementById("carrinho-vazio-texto")
 
-    if (!productsInCart.length) {
+    if (!productsInCart || !productsInCart.length) {
+        const precoTotalTexto = document.getElementById("preco-total")
+
+        precoTotalTexto.textContent = `R$0`
+
         carrinhoVazioText.style.display = "flex"
         return
     }
@@ -67,6 +72,46 @@ const updateCart = () => {
     precoTotalTexto.textContent = `R$${totalPrice}`
 }
 
+const finalizarCompra = async () => {
+    try { 
+        const formData = {
+            user_id: userStore.user.id,
+            course_ids: []
+        }
+
+        const courseIds = cartStore.cart.map((produto) => {
+            return produto.id
+        })
+
+        if (!courseIds.length) {
+            console.log("Sem produtos no carrinho para comprar")
+            return false
+        }
+
+        formData.course_ids = courseIds
+
+        const novaCompra = await fetch("http://localhost:8000/course/buy", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
+            body: JSON.stringify(formData),
+        });
+
+        const novaCompraRes = await novaCompra.json();
+
+        console.log(novaCompraRes)
+        if (novaCompraRes.success) {
+            cartStore.clearCart()
+            updateCart()
+            return
+        }
+    } catch(err) {
+        console.log(err)
+    }
+}
+
 document.addEventListener("DOMContentLoaded", async function() {
     updateCart()
 
@@ -74,5 +119,12 @@ document.addEventListener("DOMContentLoaded", async function() {
 
     limparCarrinhoButton.addEventListener("click", function() {
         cartStore.clearCart()
+        updateCart()
+    })
+
+    const finalizarCompraButton = document.getElementById("Finalizar")
+
+    finalizarCompraButton.addEventListener("click", async () => {
+        await finalizarCompra()
     })
 })
