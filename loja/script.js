@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
       const productImage = document.createElement("img");
       productImage.src =
-        course.imageUrl ||
+        course.thumb_url ||
         "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop";
       productImage.alt = course.name;
 
