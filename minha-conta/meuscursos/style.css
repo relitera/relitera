@@ -78,7 +78,6 @@ main {
     font-weight: bold;
     color: var(--black);
     margin-bottom: 3rem;
-    text-transform: uppercase;
     letter-spacing: 2px;
 }
 
