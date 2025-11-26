@@ -36,45 +36,12 @@ document.addEventListener("DOMContentLoaded", async function () {
       productButtonsContainer.className = "product-buttons";
 
       const buttonId = `${course.name.toLowerCase().replace(/\s+/g, "-")}-btn`;
-      const aboutButton = document.createElement("button");
-      aboutButton.id = buttonId;
-      aboutButton.className = "btn-sobre";
-      aboutButton.textContent = "SOBRE";
-
-      aboutButton.onclick = function () {
-        const descricaoElement = document.getElementById(
-          "descricao-curso-texto"
-        );
-        if (descricaoElement) {
-          descricaoElement.textContent = course.description;
-        }
-
-        const descricaoContainer = document.getElementById(
-          "info-curso-container"
-        );
-        if (descricaoContainer) {
-          descricaoContainer.style.display = "flex";
-        }
-      };
-
-      const buyButton = document.createElement("button");
-      buyButton.className = "btn-comprar";
-
-      buyButton.innerHTML = "";
-      
-      const icon = document.createElement("i");
-      icon.className = "fa-solid fa-cart-shopping fa-lg";
-      icon.setAttribute("aria-hidden", "true");
-
-      buyButton.appendChild(icon);
-
-      buyButton.onclick = function () {
-        cartStore.addProduct(course);
-        console.log(cartStore.getCart());
-      };
-
-      productButtonsContainer.appendChild(aboutButton);
-      productButtonsContainer.appendChild(buyButton);
+      const continueToWatch = document.createElement("button");
+      continueToWatch.id = buttonId;
+      continueToWatch.className = "btn-continue-watch";
+      continueToWatch.textContent = "Assistir";
+     
+      productButtonsContainer.appendChild(continueToWatch);
 
       productCard.appendChild(productTitle);
       productCard.appendChild(productImageContainer);

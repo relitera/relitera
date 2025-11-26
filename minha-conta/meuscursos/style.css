@@ -159,8 +159,7 @@ main {
     margin-top: auto;
 }
 
-.btn-sobre,
-.btn-comprar {
+.btn-continue-watch {
     flex: 1;
     background-color: var(--dark-purple);
     color: var(--white);
@@ -175,14 +174,12 @@ main {
     letter-spacing: 0.5px;
 }
 
-.btn-sobre:hover,
-.btn-comprar:hover {
+.btn-continue-watch:hover {
     background-color: rgba(92, 58, 119, 0.8);
     transform: translateY(-2px);
 }
 
-.btn-sobre:active,
-.btn-comprar:active {
+.btn-continue-watch {
     transform: translateY(0);
 }
 
