@@ -207,7 +207,7 @@ class TopNavbar extends HTMLElement {
       <div class="top-navbar-container">
         <div class="header-esq">
           <i class="fa-solid fa-bars fa-lg"></i>
-          <a href="../index.html"><h1>Relitera</h1></a>
+          <a href="/index.html"><h1>Relitera</h1></a>
         </div>
         <div class="cart-icone">
           <a href="/carrinho/index.html">
