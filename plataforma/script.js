@@ -379,8 +379,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     `;
     document.head.appendChild(notificationStyles);
-
-    setTimeout(() => {
-        showNotification('Bem-vindo à Relitera! 🎓', 'success');
-    }, 1000);
 });
