@@ -73,7 +73,9 @@ const updateCart = () => {
 }
 
 const finalizarCompra = async () => {
-    try { 
+    try {
+        const mensagemCompra = document.getElementById("mensagem")
+
         const formData = {
             user_id: userStore.user.id,
             course_ids: []
@@ -85,6 +87,9 @@ const finalizarCompra = async () => {
 
         if (!courseIds.length) {
             console.log("Sem produtos no carrinho para comprar")
+            mensagemCompra.textContent = "Seu carrinho está vazio!"
+            mensagemCompra.style.color = "#f94120"
+
             return false
         }
 
@@ -103,11 +108,17 @@ const finalizarCompra = async () => {
 
         console.log(novaCompraRes)
         if (novaCompraRes.success) {
+            mensagemCompra.textContent = novaCompraRes.message
+            mensagemCompra.style.color = "#27ae60";
             cartStore.clearCart()
             updateCart()
             return
         }
     } catch(err) {
+        const mensagemCompra = document.getElementById("mensagem")
+
+        mensagemCompra.textContent = "Algum erro ocorreu. Tente novamente mais tarde."
+        mensagemCompra.style.color = "#f94120"
         console.log(err)
     }
 }
