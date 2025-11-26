@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const coursePopup = document.getElementById('coursePopup');
     const popupBtn = document.querySelector('.popup-btn');
     const searchInput = document.querySelector('.search-input');
-    const scrollArrow = document.querySelector('.scroll-arrow');
     const coursesContainer = document.querySelector('.courses-container');
     const continueBtn = document.querySelector('.continue-btn');
     const videoPlaceholder = document.querySelector('.video-placeholder');
@@ -317,10 +316,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     searchInput.addEventListener('input', (e) => {
         searchCourses(e.target.value);
-    });
-
-    scrollArrow.addEventListener('click', () => {
-        scrollCourses('right');
     });
 
     continueBtn.addEventListener('click', continueWatching);
