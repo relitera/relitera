@@ -1,9 +1,17 @@
 import cartStore from "../../store/CartStore/CartStore.js";
+import userStore from "../../store/UserStore/UserStore.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
-  const coursesGet = await fetch("http://localhost:8000/courses", {
-    method: "GET",
-  });
+  const userId = userStore.user.id
+
+  if (!userId) return false
+
+  const coursesGet = await fetch(
+    `http://localhost:8000/courses/user?user_id=${userId}`,
+      {
+        method: "GET",
+      }
+  );
 
   console.log(coursesGet);
 
@@ -26,7 +34,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
       const productImage = document.createElement("img");
       productImage.src =
-        course.imageUrl ||
+        course.thumb_url ||
         "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop";
       productImage.alt = course.name;
 
