@@ -29,6 +29,19 @@ class UserStore {
   }
 }
 
+export function isLogged() {
+  const userRaw = localStorage.getItem("user");
+  if (!userRaw) return false;
+
+  try {
+    const user = JSON.parse(userRaw);
+    return Boolean(user?.id);
+  } catch {
+    localStorage.removeItem("user");
+    return false;
+  }
+}
+
 const userStore = new UserStore()
 
 export default userStore

@@ -47,6 +47,7 @@ botaoLogin.addEventListener('click', async function(){
             userStore.setUser(userRes)
 
             localStorage.setItem("user-token", userRes.token)
+            localStorage.setItem("user", JSON.stringify(userRes))
         
             setTimeout(() => {
                 document.location.href = "/"

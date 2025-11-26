@@ -1,4 +1,12 @@
+import { isLogged } from "../store/UserStore/UserStore.js";
+
 document.addEventListener('DOMContentLoaded', function() {
+    if (!isLogged()) {
+        localStorage.removeItem("user-token");
+        localStorage.removeItem("user");
+        window.location.href = "/minha-conta/login/"
+    }
+
     const menuBtn = document.querySelector('.menu-btn');
     const tabs = document.querySelectorAll('.tab');
     const courseCards = document.querySelectorAll('.course-card');
