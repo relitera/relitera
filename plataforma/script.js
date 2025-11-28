@@ -2,6 +2,13 @@ import { isLogged } from "../store/UserStore/UserStore.js";
 import lessonsStore from "../store/LessonsStore/LessonsStore.js";
 
 document.addEventListener("DOMContentLoaded", function () {
+  if (!isLogged()) {
+    localStorage.removeItem("user-token");
+    localStorage.removeItem("user");
+    window.location.href = "/minha-conta/login";
+    return;
+  }
+
   function goBack() {
     window.location.href = `${window.location.origin}/minha-conta/meuscursos/index.html`;
   }
@@ -93,12 +100,6 @@ document.addEventListener("DOMContentLoaded", function () {
   playButton.addEventListener("click", function () {
     alert("Iniciando vídeo... (Simulação)");
   });
-
-  if (!isLogged()) {
-    localStorage.removeItem("user-token");
-    localStorage.removeItem("user");
-    window.location.href = "/minha-conta/login/";
-  }
 
   const menuBtn = document.querySelector(".menu-btn");
   const tabs = document.querySelectorAll(".tab");

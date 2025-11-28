@@ -1,6 +1,14 @@
 import cartStore from "../store/CartStore/CartStore.js";
+import { isLogged } from "../store/UserStore/UserStore.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
+  if (!isLogged()) {
+    localStorage.removeItem("user-token");
+    localStorage.removeItem("user");
+    window.location.href = "/minha-conta/login";
+    return;
+  }
+
   const coursesGet = await fetch("http://localhost:8000/courses", {
     method: "GET",
   });

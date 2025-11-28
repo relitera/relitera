@@ -1,7 +1,14 @@
 import cartStore from "../../store/CartStore/CartStore.js";
 import userStore from "../../store/UserStore/UserStore.js";
+import { isLogged } from "../../store/UserStore/UserStore.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
+  if (!isLogged()) {
+    localStorage.removeItem("user");
+    localStorage.removeItem("user-token");
+    window.location.href = "/minha-conta/login";
+    return;
+  }
   const userId = userStore.user.id
 
   if (!userId) return false

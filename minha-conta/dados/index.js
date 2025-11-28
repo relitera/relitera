@@ -1,6 +1,14 @@
 import userStore from "../../store/UserStore/UserStore.js";
+import { isLogged } from "../../store/UserStore/UserStore.js";
 
 document.addEventListener("DOMContentLoaded", () => {
+    if (!isLogged()) {
+        localStorage.removeItem("user");
+        localStorage.removeItem("user-token");
+        window.location.href = "/minha-conta/login/";
+        return;
+    }
+
     const nomeUsuarioText = document.getElementById("nome-usuario")
     const emailUsuarioText = document.getElementById("email-usuario")
     const dataDeNascimentoText = document.getElementById("data-de-nascimento")

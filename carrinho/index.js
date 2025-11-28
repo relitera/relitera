@@ -1,5 +1,6 @@
 import cartStore from "../store/CartStore/CartStore.js"
-import userStore from "../../store/UserStore/UserStore.js";
+import userStore from "../store/UserStore/UserStore.js";
+import { isLogged } from "../store/UserStore/UserStore.js";
 
 function createCartItem(id, name, quantity) {
     if (!id || !name || !quantity) return
@@ -119,6 +120,13 @@ const finalizarCompra = async () => {
 }
 
 document.addEventListener("DOMContentLoaded", async function() {
+    if (!isLogged()) {
+        localStorage.removeItem("user-token");
+        localStorage.removeItem("user");
+        window.location.href = "/minha-conta/login";
+        return;
+    }
+
     updateCart()
 
     const limparCarrinhoButton = document.getElementById("Limpar")
