@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     const coursesRes = await coursesGet.json();
     console.log(coursesRes);
-    sadas;
     const productsGrid = document.getElementById("products-grid-id");
 
     if (coursesRes && Array.isArray(coursesRes)) {
@@ -99,6 +98,13 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         productsGrid.appendChild(productCard);
       });
+    } else {
+      const feedbackCarregamentoText = document.getElementById(
+        "feedback-carregamento-texto"
+      );
+
+      feedbackCarregamentoText.textContent = "Um erro ocorreu. Tente novamente mais tarde."
+      feedbackCarregamentoText.style.color = "red"
     }
 
     const menuToggle = document.querySelector(".menu-toggle");
