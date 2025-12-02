@@ -16,6 +16,9 @@ botaoLogin.addEventListener('click', async function(){
     try {
         console.log("loggandi");
 
+        const feedbackMessage = document.getElementById("feedback-message")
+        feedbackMessage.textContent = "Aguarde..."
+
         const formData = getFormValues();
 
         console.log(formData)
@@ -28,6 +31,8 @@ botaoLogin.addEventListener('click', async function(){
             },
             body: JSON.stringify(formData),
         });
+
+        feedbackMessage.textContent = ""
 
         const userRes = await user.json();
 
@@ -56,6 +61,7 @@ botaoLogin.addEventListener('click', async function(){
 
         console.log(userStore.user)
     } catch (err) {
+        feedbackMessage.textContent = ""
         alerta.innerHTML = "Ocorreu um erro. Tente novamente mais tarde";
         alerta.classList.remove("alerta");
         console.error(err);
