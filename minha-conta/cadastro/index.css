@@ -161,17 +161,24 @@ body::-webkit-scrollbar {
     color: var(--cor-erro);
 }
 
-.ok{
-    color: var(--icon-leaf);
+#error-message {
+  font-size: 18px;
+  color: red;
+  margin-top: 30px;
 }
 
-.erro{
-    color: var(--icon-heart);
+#feedback-message {
+  font-size: 18px;
+  color:black;
+  margin-top: 30px;
 }
 
-.averiguando{
-    color: var(--accent-gold-hover);
+#success-message {
+  font-size: 18px;
+  color: rgb(6, 206, 6);
+  margin-top: 30px;
 }
+
 
 @media (max-width: 768px){
     .title{

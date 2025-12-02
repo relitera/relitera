@@ -50,6 +50,7 @@ senha.addEventListener("blur", () => {
   alerta.classList.remove("alerta");
 });
 console.log(botaoRegistrar)
+
 botaoRegistrar.addEventListener("click", async function () {
   try {
     console.log("registrando");
@@ -57,6 +58,9 @@ botaoRegistrar.addEventListener("click", async function () {
     const formData = getFormValues();
 
     console.log(formData)
+
+    const feedbackMessage = document.getElementById("feedback-message")
+    feedbackMessage.textContent = "Aguarde..."
 
     const newUser = await fetch("http://localhost:8000/user", {
       method: "POST",
@@ -67,25 +71,28 @@ botaoRegistrar.addEventListener("click", async function () {
       body: JSON.stringify(formData),
     });
 
+    feedbackMessage.textContent = ""
+
     const newUserRes = await newUser.json();
 
-    if (!newUserRes) return
+    const mensagemErroEl =  document.getElementById("error-message")
+
+    if (!newUserRes) {
+      mensagemErroEl.textContent = "Ocorreu um erro. Tente novamente mais tarde";
+    }
     console.log(newUserRes);
     if (newUserRes.statusCode === 400) {
-        alerta.innerHTML = newUserRes.client_message;
-        alerta.classList.remove("alerta");
+        mensagemErroEl.textContent = newUserRes.client_message
 
         return
     }
 
     if (newUserRes.id) {
+        mensagemErroEl.style.display = "none"
         userStore.setUser(newUserRes)
 
         localStorage.setItem("user-token", newUserRes.token)
     
-        alerta.innerHTML = "Conta criada com sucesso, aguarde enquanto te redirecionamos na página principal";
-        alerta.classList.remove("alerta");
-
         setTimeout(() => {
             window.location.href = "/"
         }, 1000)
@@ -93,8 +100,12 @@ botaoRegistrar.addEventListener("click", async function () {
 
     console.log(userStore.user)
   } catch (err) {
-    alerta.innerHTML = "Ocorreu um erro. Tente novamente mais tarde";
-    alerta.classList.remove("alerta");
+    const feedbackMessage = document.getElementById("feedback-message")
+
+    const mensagemErroEl =  document.getElementById("error-message")
+
+    mensagemErroEl.textContent = "Ocorreu um erro. Tente novamente mais tarde";
+    feedbackMessage.textContent = ""
     console.error(err);
   }
 });
