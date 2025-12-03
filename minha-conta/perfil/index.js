@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (botaoDeletarConta) {
     botaoDeletarConta.addEventListener("click", () => {
       const deleteUser = async () => {
-        const url = `http://localhost:8000/user/${userStore.user.email}`;
+        const url = `https://relitera-api.onrender.com/user/${userStore.user.email}`;
 
         try {
           const response = await fetch(url, {
