@@ -26,14 +26,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (usuario.birthdate) {
-        const date = new Date(usuario.birthdate)
+        console.log(usuario.birthdate);
+        const date = new Date(usuario.birthdate);
 
-        let day = date.getDay()
+        let day = date.getUTCDate(); 
+        
+        let month = date.getUTCMonth() + 1; 
 
-        if (parseInt(day) < 10) {
-            day = '0' + day
-        }
-        console.log(date)
-        dataDeNascimentoText.textContent = `Data de nascimento: ${day}-${date.getMonth()}-${date.getFullYear()}`
+        if (day < 10) day = '0' + day;
+        if (month < 10) month = '0' + month;
+
+        const year = date.getUTCFullYear();
+
+        dataDeNascimentoText.textContent = `Data de nascimento: ${day}-${month}-${year}`;
     }
 });
