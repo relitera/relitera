@@ -1,0 +1,179 @@
+.card {
+    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+    box-shadow: var(--shadow-card);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    min-height: 300px;
+    max-height: 400px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: var(--transition);
+    border: 1px solid rgba(147, 76, 178, 0.08);
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: var(--bg-hero-gradient);
+        transform: scaleX(0);
+        transition: var(--transition);
+    }
+
+    &:hover {
+        transform: translateY(-12px);
+        box-shadow: var(--shadow-card-hover);
+
+        &::before {
+            transform: scaleX(1);
+        }
+
+        .card-icon {
+            transform: scale(1.15) rotate(8deg);
+        }
+
+        .card-link {
+            color: var(--accent-gold);
+            transform: translateX(8px);
+        }
+    }
+
+    p {
+        flex-grow: 1;
+        color: #934cb2;
+        font-weight: 1000;
+        font-size: xx-large;
+    }
+}
+
+.botoesLoja{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    
+    button{
+    width: 200px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    }
+
+    #Limpar {
+        background-color: rgb(179, 179, 179);
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        font-weight: 800;
+    }
+
+    #Finalizar {
+        background-color: #934cb2;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 800;
+    }
+}
+
+.cart-icone {
+    background: linear-gradient(135deg, #af79c4 0%, #934cb2 100%);
+    padding: 12px;
+    border-radius: 50%;
+    transition: var(--transition);
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        right: -2px;
+        width: 8px;
+        height: 8px;
+        background: var(--accent-orange);
+        border-radius: 50%;
+        opacity: 0;
+        transform: scale(0);
+        transition: var(--transition);
+    }
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 15px rgba(175, 121, 196, 0.4);
+
+        &::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+
+.title {
+    padding: 20px;
+    margin: 80px;
+    text-align: center;
+    color: #934cb2;
+    font-size: 30pt;
+}
+
+.sidebar {
+    z-index: 1001 !important;
+}
+
+.sidebar-backdrop {
+    z-index: 1000 !important;
+}
+
+.mensagem-compra-retorno {
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+#item-carrinho {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+#info-item-carrinho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px;
+    color: black;
+}
+
+#info-item-carrinho-qtd {
+    margin-left: 20px;
+}
+
+#remover-item-btn {
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    background-color: #f70d1a;
+}
+
+@media (max-width: 768px){
+    .title{
+        font-size: 20pt;
+        margin-bottom: 40px;
+    }
+    
+    .botoesLoja{
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}

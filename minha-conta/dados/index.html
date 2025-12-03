@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <title>Relitera</title>
+        <meta
+            name="description"
+            content="O site para aprender sobre religiões e culturas diversas, disponibilizando aprendizado por cursos em vídeo e conteúdos escritos. Visando um mundo mais empático."
+        />
+        <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="../../global.css" />
+        <script
+            src="https://kit.fontawesome.com/c2b6f6de7d.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="../../components/side-navbar/index.js" type="text/javascript" defer></script>
+        <script src="../../components/top-navbar/index.js" type="text/javascript" defer></script>
+    </head>
+    <body id="body">
+        <top-navbar></top-navbar>
+        <side-navbar></side-navbar>
+        <div class="perfil-main-container">
+            <h1 class="title">Minha Conta</h1>
+            <div class="containers">
+                <div class="dados">
+                    <div class="dados-container">
+                        <h2 id="nome-usuario" class="dados-texto"></h2>
+                    </div>
+
+                    <div class="dados-container">
+                        <h2 id="email-usuario" class="dados-texto"></h2>
+                    </div>
+
+                    <div class="dados-container">
+                        <h2 id="data-de-nascimento" class="dados-texto"></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="../index.js"></script>
+        <script type="module" src="index.js"></script>
+    </body>
+</html>

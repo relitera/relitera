@@ -1,0 +1,119 @@
+.main-container-register {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 50pt;
+    font-weight: bold;
+    color: var(--texto-dark);
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.informacoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    input {
+        width: 340px;
+        height: 60px;
+        padding: 20px;
+        border: 2px solid #934cb2;
+        color: #1a1a1a;
+        font-size: large;
+        border-radius: 20px;
+    }
+
+    input::placeholder{
+        color: var(--texto-dark);
+    }
+
+    /* foco acessível */
+    input:focus, select:focus, textarea:focus {
+    outline: 3px solid rgba(10,102,194,.2);
+    border-color: var(--bg-hero-gradient);
+    }
+
+}
+
+.acoes{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    button{
+        border: none;
+        border-radius: 20px;
+        padding: 5px;
+        background-color: var(--bg-hero);
+        color: var(--bg-principal);
+        font-size: larger;
+        width: 250px;
+        height: 60px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 45px #9f51c0;
+    
+        &::before {
+        opacity: 1;
+        }
+    }
+
+    #registrar{
+        background-color: var(--bg-hero);
+        color: var(--bg-principal);
+    }
+
+    #apagar{
+        background-color: var(--bg-hero);
+        color: var(--icon-heart);
+    }
+}
+
+.alerta {
+    margin-top: 8px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #f1c4c1;
+    background: #fdecec;
+    color: var(--cor-erro);
+}
+
+#error-message {
+  font-size: 18px;
+  color: red;
+  margin-top: 30px;
+}
+
+#feedback-message {
+  font-size: 18px;
+  color:black;
+  margin-top: 30px;
+}
+
+#success-message {
+  font-size: 18px;
+  color: rgb(6, 206, 6);
+  margin-top: 30px;
+}
+
+
+@media (max-width: 768px){
+    .title{
+        font-size: 25pt;
+        margin-top: 75px;
+    }
+}

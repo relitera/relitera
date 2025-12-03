@@ -1,6 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
     const sidebar = document.querySelector(".sidebar");
-    const sidebarToggle = document.querySelector(".fa-bars");
+    const sidebarToggle = document.getElementById("aaaa");
     const sidebarClose = document.querySelector(".sidebar-close");
     const backdrop = document.querySelector(".sidebar-backdrop");
     const body = document.getElementById("body");
@@ -26,4 +25,3 @@ document.addEventListener("DOMContentLoaded", () => {
             closeSidebar();
         }
     });
-});

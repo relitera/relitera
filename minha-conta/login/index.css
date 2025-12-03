@@ -1,0 +1,149 @@
+.main-container-login {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 50px;
+  color: var(--texto-dark);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-top: 125px;
+  margin-bottom: 50px;
+}
+
+.input {
+   
+  display: grid;
+  grid-template-columns: auto;
+  gap: 40px;
+  margin-bottom: 60px;
+
+  input {
+    width: 300px;
+    height: 60px;
+    padding: 20px;
+    border: 2px solid #934cb2;
+    color: #1a1a1a;
+    font-size: large;
+    border-radius: 20px;
+  }
+}
+
+.input input::placeholder {
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  .tipo2 {
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: var(--bg-hero);
+    color: var(--bg-principal);
+    font-size: larger;
+    width: 250px;
+    height: 60px;
+    cursor: pointer;
+  }
+
+  .tipo1 {
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: var(--bg-hero);
+    color: var(--bg-principal);
+    font-size: larger;
+    width: 250px;
+    height: 60px;
+    cursor: pointer;
+  }
+
+  .tipo1:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 45px #9f51c0;
+
+    &::before {
+      opacity: 1;
+    }
+
+    cursor: pointer;
+  }
+
+  .tipo2:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 45px #934cb2;
+
+    &::before {
+      opacity: 1;
+    }
+
+    cursor: pointer;
+  }
+}
+
+.registro {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+  a {
+    color: #1a1a1a;
+    font-size: medium;
+    font-weight: bold;
+  }
+}
+
+#error-message {
+  font-size: 18px;
+  color: red;
+  margin-top: 30px;
+}
+
+#feedback-message {
+  font-size: 18px;
+  color:black;
+  margin-top: 30px;
+}
+
+#success-message {
+  font-size: 18px;
+  color: rgb(6, 206, 6);
+  margin-top: 30px;
+}
+
+@media (max-width: 768px){
+  .main-container-login{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .title{
+    font-size: 25pt;
+    margin-top: 100px;
+  }
+
+  .input{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .buttons{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .registro{
+    margin-top: 5px;
+  }
+}
