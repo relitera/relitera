@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const courseName = urlParams.get("course_name")
 
     const classesGet = await fetch(
-      `http://localhost:8000/classes/course?course_id=${courseId}`,
+      `https://relitera-api.onrender.com/classes/course?course_id=${courseId}`,
       {
         method: "GET",
       }

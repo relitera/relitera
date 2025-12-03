@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       return;
     }
 
-    const coursesGet = await fetch("http://localhost:8000/courses", {
+    const coursesGet = await fetch("https://relitera-api.onrender.com/courses", {
       method: "GET",
     });
 

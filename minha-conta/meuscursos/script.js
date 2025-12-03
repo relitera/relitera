@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     if (!userId) return false
 
     const coursesGet = await fetch(
-      `http://localhost:8000/courses/user?user_id=${userId}`,
+      `https://relitera-api.onrender.com/courses/user?user_id=${userId}`,
         {
           method: "GET",
         }

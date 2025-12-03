@@ -62,7 +62,7 @@ botaoRegistrar.addEventListener("click", async function () {
     const feedbackMessage = document.getElementById("feedback-message")
     feedbackMessage.textContent = "Aguarde..."
 
-    const newUser = await fetch("http://localhost:8000/user", {
+    const newUser = await fetch("https://relitera-api.onrender.com/user", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

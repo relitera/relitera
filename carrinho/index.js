@@ -91,7 +91,7 @@ const finalizarCompra = async () => {
 
         formData.course_ids = courseIds
 
-        const novaCompra = await fetch("http://localhost:8000/course/buy", {
+        const novaCompra = await fetch("https://relitera-api.onrender.com/course/buy", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
